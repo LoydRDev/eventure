@@ -1,12 +1,121 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.OleDb;
 
-namespace eventure.DataAccess
+using eventures.Models;
+using eventures.Database;
+using System.Windows.Forms;
+using eventure.Database;
+using eventure.Models;
+
+namespace eventures.DataAccess
 {
-    class UserDAO
+    public class UserDAO
     {
+        public void AddUser(User user)
+        {
+            bool isSuccess = true;
+            try
+            {
+                using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
+                {
+                    string query = "INSERT INTO Users (FirstName, LastName, Username, Email, [Password], DateCreated) " +
+                                   "VALUES (?, ?, ?, ?, ?, ?)";
+
+                    using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                    {
+                        cmd.Parameters.Add("?", OleDbType.VarChar).Value = user.FirstName;
+                        cmd.Parameters.Add("?", OleDbType.VarChar).Value = user.LastName;
+                        cmd.Parameters.Add("?", OleDbType.VarChar).Value = user.Username;
+                        cmd.Parameters.Add("?", OleDbType.VarChar).Value = user.Email;
+                        cmd.Parameters.Add("?", OleDbType.VarChar).Value = user.Password;
+                        cmd.Parameters.Add("?", OleDbType.Date).Value = user.DateCreated;
+
+                        connection.Open();
+                        int result = cmd.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
+            }
+            catch (OleDbException ex)
+            {
+                isSuccess = false;
+                MessageBox.Show($"Database error occurred: {ex.Message}\nError code: {ex.ErrorCode}");
+            }
+            catch (Exception ex)
+            {
+                isSuccess = false;
+                MessageBox.Show($"An unexpected error occurred: {ex.Message}");
+            }
+            finally
+            {
+                if (isSuccess)
+                {
+                    // display message
+                }
+            }
+        }
+
+        public User AuthenticateUser(string username, string password)
+        {
+            using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = "SELECT * FROM Users WHERE Username = @Username AND [Password] = @Password";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+
+                    connection.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new User
+                            {
+                                UserID = reader.GetInt32(0),
+                                FirstName = reader.GetString(1),
+                                LastName = reader.GetString(2),
+                                Username = reader.GetString(3),
+                                Email = reader.GetString(4),
+                                Password = reader.GetString(5),
+                                DateCreated = reader.GetDateTime(6)
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public User GetCurrentUser(string username)
+        {
+            using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = "SELECT * FROM Users WHERE Username = @Username";
+                using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    connection.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new User
+                            {
+                                UserID = reader.GetInt32(0),
+                                FirstName = reader.GetString(1),
+                                LastName = reader.GetString(2),
+                                Username = reader.GetString(3),
+                                Email = reader.GetString(4),
+                                Password = reader.GetString(5),
+                                DateCreated = reader.GetDateTime(6)
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

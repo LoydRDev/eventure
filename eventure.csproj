@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="DataAccess\EventDAO.cs" />
     <Compile Include="DataAccess\UserDAO.cs" />
+    <Compile Include="Database\DatabaseHelper.cs" />
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +104,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DatabaseHelper\" />
     <Folder Include="Forms\CreateEvent\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\EventTable.txt" />
+    <Content Include="Database\UserTable.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
