@@ -1,24 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 using eventure.DataAccess;
 using eventure.Forms;
 using eventure.Models;
 
+
 namespace eventure.Controller
 {
     class EventController
     {
+        private EventDAO eventDAO = new EventDAO();
+        private List<Event> events = new EventDAO().GetEvents();
+        Event evt = new Event();
+        int userID;
+
+        public EventController(int userID)
+        {
+            this.userID = userID;
+        }
+
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
         public void LoadAllEvents(FlowLayoutPanel flowLayoutPanel)
         {
-            List<Event> events = new EventDAO().GetEvents();
             flowLayoutPanel.Controls.Clear();
 
             for(int i = 0; i < events.Count; i++)
             {
                 Event evt = events[i];
+
 
                 var guna2GradientPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
                 guna2GradientPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -54,28 +64,33 @@ namespace eventure.Controller
                 guna2Button.Name = "guna2Button"+i;
                 guna2Button.Size = new System.Drawing.Size(169, 18);
                 guna2Button.TabIndex = 6;
-                guna2Button.Text = evt.EventName;
-                guna2Button.Click += (s, args) => JoinEventButton(evt);
+                guna2Button.Text = CustomizeButton(evt);
+                guna2Button.Tag = evt;
+                guna2Button.Click += (s, args) => EventButton(evt);
 
                 var guna2HtmlLabelEventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                guna2HtmlLabelEventName.AutoSize = false;
                 guna2HtmlLabelEventName.BackColor = System.Drawing.Color.Transparent;
                 guna2HtmlLabelEventName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 guna2HtmlLabelEventName.ForeColor = System.Drawing.Color.Black;
-                guna2HtmlLabelEventName.Location = new System.Drawing.Point(49, 7);
+                guna2HtmlLabelEventName.Location = new System.Drawing.Point(3, 7);
                 guna2HtmlLabelEventName.Name = "guna2HtmlLabelEventName" + i;
-                guna2HtmlLabelEventName.Size = new System.Drawing.Size(78, 19);
+                guna2HtmlLabelEventName.Size = new System.Drawing.Size(169, 19);
                 guna2HtmlLabelEventName.TabIndex = 1;
-                guna2HtmlLabelEventName.Text = "Event_Name";
+                guna2HtmlLabelEventName.Text = evt.EventName;
+                guna2HtmlLabelEventName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 
                 var guna2HtmlLabelEventCategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                guna2HtmlLabelEventCategory.AutoSize = false;
                 guna2HtmlLabelEventCategory.BackColor = System.Drawing.Color.Transparent;
                 guna2HtmlLabelEventCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 guna2HtmlLabelEventCategory.ForeColor = System.Drawing.Color.Black;
-                guna2HtmlLabelEventCategory.Location = new System.Drawing.Point(40, 144);
+                guna2HtmlLabelEventCategory.Location = new System.Drawing.Point(3, 144);
                 guna2HtmlLabelEventCategory.Name = "guna2HtmlLabelEventCategory"+i;
-                guna2HtmlLabelEventCategory.Size = new System.Drawing.Size(97, 19);
+                guna2HtmlLabelEventCategory.Size = new System.Drawing.Size(169, 19);
                 guna2HtmlLabelEventCategory.TabIndex = 2;
                 guna2HtmlLabelEventCategory.Text = evt.EventCategory;
+                guna2HtmlLabelEventCategory.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 
                 var guna2HtmlLabelEventLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
                 guna2HtmlLabelEventLocation.BackColor = System.Drawing.Color.Transparent;
@@ -91,7 +106,7 @@ namespace eventure.Controller
                 guna2HtmlLabelEventStart.Name = "guna2HtmlLabelEventStart"+i;
                 guna2HtmlLabelEventStart.Size = new System.Drawing.Size(59, 15);
                 guna2HtmlLabelEventStart.TabIndex = 4;
-                guna2HtmlLabelEventStart.Text = evt.EventStart;
+                guna2HtmlLabelEventStart.Text = evt.EventStart.ToString("dd/MM/yy HH:MM");
 
                 var guna2HtmlLabelEventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
                 guna2HtmlLabelEventEnd.BackColor = System.Drawing.Color.Transparent;
@@ -99,7 +114,7 @@ namespace eventure.Controller
                 guna2HtmlLabelEventEnd.Name = "guna2HtmlLabelEventStart"+i;
                 guna2HtmlLabelEventEnd.Size = new System.Drawing.Size(56, 15);
                 guna2HtmlLabelEventEnd.TabIndex = 5;
-                guna2HtmlLabelEventEnd.Text = evt.EventEnd;
+                guna2HtmlLabelEventEnd.Text = evt.EventEnd.ToString("dd/MM/yy HH:MM");
 
                 guna2GradientPanel.Controls.Add(guna2ImageButton);
                 guna2GradientPanel.Controls.Add(guna2Button);
@@ -112,14 +127,45 @@ namespace eventure.Controller
                 flowLayoutPanel.Controls.Add(guna2GradientPanel);
             }
         }
-        private void JoinEventButton(Event e)
+
+        private string CustomizeButton(Event e)
         {
-            MessageBox.Show($"You have joined the event: {e.EventName}");
+            var currentUser = new UserDAO().GetCurrentUser(userID);
+            var guna2Button = new Guna.UI2.WinForms.Guna2Button();
+
+            if (currentUser != null)
+            {
+                if (currentUser.UserID == e.CreatorID)
+                {
+                    guna2Button.Text = "Edit Event";
+                }
+                else
+                {
+                    guna2Button.Text = "Join Event";
+                }
+            }
+            else
+            {
+                guna2Button.Text = "Join Event";
+            }
+
+            return guna2Button.Text;
         }
 
-        public string ConvertDateTimeToString(DateTime dateTime)
+        private void EventButton(Event e)
         {
-            return dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            string cButton = CustomizeButton(e);
+            if (cButton == "Edit Event")
+            {
+
+            }
+            else if (cButton == "Join Event")
+            {
+                int selectedEventID = e.EventID;
+                Event selectedEvent = new EventDAO().GetEventByID(selectedEventID);
+                var eventRegistration = new EventRegistration(userID, selectedEvent);
+                eventRegistration.Show();
+            }
         }
     }
 }

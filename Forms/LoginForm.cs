@@ -31,13 +31,14 @@ namespace eventure.Forms
 
             UserDAO userDAO = new UserDAO();
             User loggedInUser = userDAO.AuthenticateUser(username, password);
+            int UserID = loggedInUser.UserID;
 
             if (loggedInUser != null)
             {
                 MessageBox.Show($"Welcome, {loggedInUser.FirstName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
-                var dashboard = new Dashboard(username);
+                var dashboard = new Dashboard(UserID);
                 dashboard.FormClosed += (s, args) => this.Close();
                 dashboard.Show();
             }

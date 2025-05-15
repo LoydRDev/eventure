@@ -417,6 +417,11 @@
             this.NUPEventMaxCapacity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NUPEventMaxCapacity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NUPEventMaxCapacity.Location = new System.Drawing.Point(35, 345);
+            this.NUPEventMaxCapacity.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.NUPEventMaxCapacity.Name = "NUPEventMaxCapacity";
             this.NUPEventMaxCapacity.Size = new System.Drawing.Size(492, 36);
             this.NUPEventMaxCapacity.TabIndex = 16;
@@ -430,12 +435,13 @@
             this.DTPEventEnd.Checked = true;
             this.DTPEventEnd.CustomFormat = "MM/dd/yyyy hh:mm tt";
             this.DTPEventEnd.FillColor = System.Drawing.Color.White;
-            this.DTPEventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DTPEventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.DTPEventEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DTPEventEnd.Location = new System.Drawing.Point(296, 257);
             this.DTPEventEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DTPEventEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DTPEventEnd.Name = "DTPEventEnd";
+            this.DTPEventEnd.ShowUpDown = true;
             this.DTPEventEnd.Size = new System.Drawing.Size(231, 39);
             this.DTPEventEnd.TabIndex = 15;
             this.DTPEventEnd.Value = new System.DateTime(2025, 5, 15, 18, 32, 57, 612);
@@ -453,6 +459,7 @@
             this.DTPEventStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DTPEventStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DTPEventStart.Name = "DTPEventStart";
+            this.DTPEventStart.ShowUpDown = true;
             this.DTPEventStart.Size = new System.Drawing.Size(231, 39);
             this.DTPEventStart.TabIndex = 14;
             this.DTPEventStart.Value = new System.DateTime(2025, 5, 15, 18, 35, 42, 244);

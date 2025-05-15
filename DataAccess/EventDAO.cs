@@ -12,20 +12,31 @@ namespace eventure.DataAccess
     {
         public void CreateEvent(Event eventObj)
         {
-            bool isSuccess = false;
+            bool isSuccess = true;
             try
             {
                 using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
                 {
-                    string query = "INSERT INTO Events (EventName, Description, EventDate, EventStart, EventEnd, Location, AgeRestriction, Capacity, Category, CreatorID, DateCreated) " +
-                                   "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                    string query = "INSERT INTO Events (EventName, Description, EventStart, EventEnd, Status, Location, Capacity, Category, CreatorID, DateCreated) " +
+                                   "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                     using (OleDbCommand cmd = new OleDbCommand(query, connection))
                     {
+
+                        DateTime now = DateTime.Now;
+                        string es = "Default";
+                        if (now < eventObj.EventStart)
+                            es = "Upcoming";
+                        else if (now >= eventObj.EventStart && now <= eventObj.EventEnd)
+                            es = "Ongoing";
+                        else
+                            es = "Finished";
+
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventName;
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventDescription;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventStart;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventEnd;
+                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventStatus = es;
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventLocation;
                         cmd.Parameters.Add("?", OleDbType.Integer).Value = eventObj.EventMaxCapacity;
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventCategory;
@@ -57,35 +68,13 @@ namespace eventure.DataAccess
                 }
             }
         }
-        public int GetTableRowsCount()
-        {
-            int rowCount = 0;
-            try
-            {
-                string query = $"SELECT COUNT(*) FROM Events";
-                using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
-                {
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
-                    {
-                        connection.Open();
-                        rowCount = (int)command.ExecuteScalar();
-                        connection.Close();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error retrieving row count: {ex.Message}");
-            }
-            return rowCount;
-        }
 
         public List<Event> GetEvents()
         {
             List<Event> events = new List<Event>();
             using (OleDbConnection conn = new OleDbConnection(DatabaseHelper.connectionString))
             {
-                string query = "SELECT EventID, EventName, Category, Description, EventStart, EventEnd, Location, Capacity, CreatorID  FROM Events";
+                string query = "SELECT EventID, EventName, Category, Description, EventStart, EventEnd, Location, Capacity, CreatorID,  Status  FROM Events";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 conn.Open();
                 OleDbDataReader reader = cmd.ExecuteReader();
@@ -98,8 +87,9 @@ namespace eventure.DataAccess
                         EventName = reader["EventName"].ToString(),
                         EventCategory = reader["Category"].ToString(),
                         EventDescription = reader["Description"].ToString(),
-                        EventStart = reader["EventStart"].ToString(),
-                        EventEnd = reader["EventEnd"].ToString(),
+                        EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
+                        EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
+                        EventStatus = reader["Status"].ToString(),
                         EventLocation = reader["Location"].ToString(),
                         EventMaxCapacity = Convert.ToInt32(reader["Capacity"]),
                         CreatorID = Convert.ToInt32(reader["CreatorID"])
@@ -109,6 +99,94 @@ namespace eventure.DataAccess
                 reader.Close();
             }
             return events;
+        }
+
+        public List<Event> getCurrentUserEvents(int userID)
+        {
+            List<Event> events = new List<Event>();
+
+            using (OleDbConnection conn = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = "SELECT * FROM Events WHERE CreatorID = ?";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("?", userID);
+
+                    conn.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Event evt = new Event()
+                            {
+                                EventID = Convert.ToInt32(reader["EventID"]),
+                                EventName = reader["EventName"].ToString(),
+                                EventCategory = reader["Category"].ToString(),
+                                EventDescription = reader["Description"].ToString(),
+                                EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
+                                EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
+                                EventLocation = reader["Location"].ToString(),
+                                EventMaxCapacity = Convert.ToInt32(reader["Capacity"]),
+                            };
+                            events.Add(evt);
+                        }
+                    }
+                }
+            }
+            return events;
+        }
+        public Event GetEventByID(int eventID)
+        {
+            Event evt = null;
+            using (OleDbConnection conn = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = "SELECT * FROM Events WHERE EventID = ?";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("?", eventID);
+                    conn.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            evt = new Event()
+                            {
+                                EventID = Convert.ToInt32(reader["EventID"]),
+                                EventName = reader["EventName"].ToString(),
+                                EventCategory = reader["Category"].ToString(),
+                                EventDescription = reader["Description"].ToString(),
+                                EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
+                                EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
+                                EventLocation = reader["Location"].ToString(),
+                                EventMaxCapacity = Convert.ToInt32(reader["Capacity"]),
+                            };
+                        }
+                    }
+                }
+            }
+            return evt;
+        }
+
+        public string GetEventCreatorName(int eventID)
+        {
+            string creatorName = "";
+            using (OleDbConnection conn = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = "SELECT Users.FirstName, Users.LastName FROM Users INNER JOIN Events ON Users.UserID = Events.CreatorID WHERE Events.EventID = ?";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("?", eventID);
+                    conn.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            creatorName = $"{reader["FirstName"]} {reader["LastName"]}";
+                        }
+                    }
+                }
+            }
+            return creatorName;
         }
     }
 }

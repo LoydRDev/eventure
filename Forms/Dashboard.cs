@@ -7,25 +7,27 @@ namespace eventure.Forms
 {
     public partial class Dashboard: Form
     {
-        EventController eventCon = new EventController();
-        string username;
-        public Dashboard(string username)
+        int userID;
+
+        public Dashboard(int userID)
         {
-            this.username = username;
+            this.userID = userID;
             InitializeComponent();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            EventController eventCon = new EventController(userID);
             eventCon.LoadAllEvents(flowLayoutPanel1);   
-
         }
 
         private void BtnCreateEvent_Click(object sender, EventArgs e)
         {
-            var createEventForm = new CreateEvent(username);
+            EventController eventCon = new EventController(userID);
+            var createEventForm = new CreateEvent(userID);
             createEventForm.FormClosed += (s, args) => this.Close();
             createEventForm.Show();
+            eventCon.LoadAllEvents(flowLayoutPanel1);
         }
     }
 }

@@ -86,14 +86,14 @@ namespace eventure.DataAccess
             return null;
         }
 
-        public User GetCurrentUser(string username)
+        public User GetCurrentUser(int UserID)
         {
             using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
             {
-                string query = "SELECT * FROM Users WHERE Username = @Username";
+                string query = "SELECT * FROM Users WHERE UserID = @UserID";
                 using (OleDbCommand cmd = new OleDbCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@UserID", UserID);
                     connection.Open();
                     using (OleDbDataReader reader = cmd.ExecuteReader())
                     {

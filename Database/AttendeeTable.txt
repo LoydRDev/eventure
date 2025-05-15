@@ -1,0 +1,10 @@
+﻿CREATE TABLE Attendees (
+    AttendeeID INTEGER, 
+    EventID INTEGER,
+    Status VARCHAR(20),
+    RegistrationDate DATETIME,
+ 
+    CONSTRAINT PK_Attendee PRIMARY KEY (AttendeeID, EventID),
+    CONSTRAINT FK_Events_Attendee FOREIGN KEY (EventID) REFERENCES Events(EventID),
+    CONSTRAINT FK_Users_Attendee FOREIGN KEY (AttendeeID) REFERENCES [Users](UserID)
+);

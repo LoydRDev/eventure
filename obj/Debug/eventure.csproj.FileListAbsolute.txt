@@ -36,3 +36,4 @@ C:\Users\noemi\Desktop\eventure\bin\Debug\Eventure.accdb
 C:\Users\noemi\Desktop\eventure\bin\Debug\System.Data.OleDb.dll
 C:\Users\noemi\Desktop\eventure\bin\Debug\System.Data.OleDb.xml
 C:\Users\noemi\Desktop\eventure\obj\Debug\eventure.Forms.CreateEvent.resources
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.Forms.EventRegistration.resources

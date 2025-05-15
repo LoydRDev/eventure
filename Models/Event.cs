@@ -8,11 +8,13 @@ namespace eventure.Models
         public string EventName { get; set; }
         public string EventCategory { get; set; }
         public string EventDescription { get; set; }
-        public string EventStart { get; set; }
-        public string EventEnd { get; set; }
+        public DateTime EventStart { get; set; }
+        public DateTime EventEnd { get; set; }
         public string EventLocation { get; set; }
         public int EventMaxCapacity { get; set; }
         public int CreatorID { get; set; }
+        public string EventStatus { get; set; }
         public DateTime DateCreated { get; set; }
+
     }
 }

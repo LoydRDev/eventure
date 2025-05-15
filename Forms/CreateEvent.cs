@@ -11,12 +11,12 @@ namespace eventure.Forms
 {
     public partial class CreateEvent : Form
     {
-        private EventController eventCon = new EventController();
+        private EventDAO eventDAO = new EventDAO();
         private Event eventData = new Event();
-        string username;
-        public CreateEvent(string username)
+        int userID;
+        public CreateEvent(int userID)
         {
-            this.username = username;
+            this.userID = userID;
             InitializeComponent();
         }
 
@@ -36,15 +36,15 @@ namespace eventure.Forms
             eventData.EventCategory = CBEventType.SelectedItem.ToString();
             eventData.EventDescription = TBEventDescription.Text;
             eventData.EventLocation = TBEventLocation.Text;
-            eventData.EventStart = eventCon.ConvertDateTimeToString(DTPEventStart.Value);
-            eventData.EventEnd = eventCon.ConvertDateTimeToString(DTPEventEnd.Value);
+            eventData.EventStart = DTPEventStart.Value;
+            eventData.EventEnd = DTPEventEnd.Value;
             eventData.EventMaxCapacity = Convert.ToInt32(NUPEventMaxCapacity.Text);
             TCCreateEvent.SelectedTab = TCCreateEvent.TabPages[2];
             LblEventName.Text = eventData.EventName;
             LblEventType.Text = eventData.EventCategory;
             LblEventLocation.Text = eventData.EventLocation;
-            LblEventStart.Text = eventData.EventStart;
-            LblEventEnd.Text = eventData.EventEnd;
+            LblEventStart.Text = eventData.EventStart.ToString("dd/MM/yy HH:MM");
+            LblEventEnd.Text = eventData.EventEnd.ToString("dd/MM/yy HH:MM");
             LblEventMaxCapacity.Text = eventData.EventMaxCapacity.ToString();
         }
 
@@ -60,21 +60,27 @@ namespace eventure.Forms
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
-            var currentUser = new UserDAO().GetCurrentUser(username);
+            var currentUser = new UserDAO().GetCurrentUser(userID);
 
             if (Validations())
             {
-                Event events = new Event
+                var result = MessageBox.Show("Are you sure you want to create this event?", "Create Event", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    EventName = TBEventName.Text,
-                    EventDescription = TBEventDescription.Text,
-                    EventLocation = TBEventLocation.Text,
-                    EventStart = eventCon.ConvertDateTimeToString(DTPEventStart.Value),
-                    EventEnd = eventCon.ConvertDateTimeToString(DTPEventEnd.Value),
-                    EventMaxCapacity = Convert.ToInt32(NUPEventMaxCapacity.Text),
-                    EventCategory = CBEventType.SelectedItem.ToString(),
-                    CreatorID = currentUser.UserID
-                };
+                    Event events = new Event
+                    {
+                        EventName = TBEventName.Text,
+                        EventDescription = TBEventDescription.Text,
+                        EventLocation = TBEventLocation.Text,
+                        EventStart = DTPEventStart.Value,
+                        EventEnd = DTPEventEnd.Value,
+                        EventMaxCapacity = Convert.ToInt32(NUPEventMaxCapacity.Text),
+                        EventCategory = CBEventType.SelectedItem.ToString(),
+                        CreatorID = currentUser.UserID
+                    };
+                    eventDAO.CreateEvent(events);
+                    this.Hide();
+                }
             }
         }
 

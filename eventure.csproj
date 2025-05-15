@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\AttendeeDAO.cs" />
     <Compile Include="DataAccess\EventDAO.cs" />
     <Compile Include="DataAccess\UserDAO.cs" />
     <Compile Include="Database\DatabaseHelper.cs" />
@@ -78,12 +79,19 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EventRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EventRegistration.Designer.cs">
+      <DependentUpon>EventRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
@@ -94,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EventRegistration.resx">
+      <DependentUpon>EventRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -136,6 +147,7 @@
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database\AttendeeTable.txt" />
     <Content Include="Database\EventTable.txt" />
     <Content Include="Database\UserTable.txt" />
     <Content Include="Eventure.accdb">
