@@ -23,12 +23,12 @@ namespace eventure.DataAccess
                     using (OleDbCommand cmd = new OleDbCommand(query, connection))
                     {
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventName;
-                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.Description;
+                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventDescription;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventStart;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventEnd;
-                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.Location;
-                        cmd.Parameters.Add("?", OleDbType.Integer).Value = eventObj.Capacity;
-                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.Category;
+                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventLocation;
+                        cmd.Parameters.Add("?", OleDbType.Integer).Value = eventObj.EventMaxCapacity;
+                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventCategory;
                         cmd.Parameters.Add("?", OleDbType.Integer).Value = eventObj.CreatorID;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = DateTime.Now;
 
@@ -85,7 +85,7 @@ namespace eventure.DataAccess
             List<Event> events = new List<Event>();
             using (OleDbConnection conn = new OleDbConnection(DatabaseHelper.connectionString))
             {
-                string query = "SELECT EventID, EventName, Category, Description, EventDate, EventStart,EventEnd, Location, AgeRestriction, Capacity, CreatorID  FROM Events";
+                string query = "SELECT EventID, EventName, Category, Description, EventStart, EventEnd, Location, Capacity, CreatorID  FROM Events";
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 conn.Open();
                 OleDbDataReader reader = cmd.ExecuteReader();
@@ -96,12 +96,12 @@ namespace eventure.DataAccess
                     {
                         EventID = Convert.ToInt32(reader["EventID"]),
                         EventName = reader["EventName"].ToString(),
-                        Category = reader["Category"].ToString(),
-                        Description = reader["Description"].ToString(),
+                        EventCategory = reader["Category"].ToString(),
+                        EventDescription = reader["Description"].ToString(),
                         EventStart = reader["EventStart"].ToString(),
                         EventEnd = reader["EventEnd"].ToString(),
-                        Location = reader["Location"].ToString(),
-                        Capacity = Convert.ToInt32(reader["Capacity"]),
+                        EventLocation = reader["Location"].ToString(),
+                        EventMaxCapacity = Convert.ToInt32(reader["Capacity"]),
                         CreatorID = Convert.ToInt32(reader["CreatorID"])
                     };
                     events.Add(evt);

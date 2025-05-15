@@ -8,9 +8,10 @@ namespace eventure.Forms
     public partial class Dashboard: Form
     {
         EventController eventCon = new EventController();
-
-        public Dashboard()
+        string username;
+        public Dashboard(string username)
         {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -18,6 +19,13 @@ namespace eventure.Forms
         {
             eventCon.LoadAllEvents(flowLayoutPanel1);   
 
+        }
+
+        private void BtnCreateEvent_Click(object sender, EventArgs e)
+        {
+            var createEventForm = new CreateEvent(username);
+            createEventForm.FormClosed += (s, args) => this.Close();
+            createEventForm.Show();
         }
     }
 }

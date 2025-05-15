@@ -76,7 +76,7 @@
             this.guna2GradientPanel20 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnCreateEvent = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -702,7 +702,7 @@
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.White;
-            this.guna2Panel5.Controls.Add(this.guna2Button9);
+            this.guna2Panel5.Controls.Add(this.BtnCreateEvent);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel5.Controls.Add(this.flowLayoutPanel2);
             this.guna2Panel5.Location = new System.Drawing.Point(2, 298);
@@ -710,19 +710,22 @@
             this.guna2Panel5.Size = new System.Drawing.Size(807, 289);
             this.guna2Panel5.TabIndex = 11;
             // 
-            // guna2Button9
+            // BtnCreateEvent
             // 
-            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button9.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.Location = new System.Drawing.Point(660, 25);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.Size = new System.Drawing.Size(142, 22);
-            this.guna2Button9.TabIndex = 9;
-            this.guna2Button9.Text = "Create Event";
+            this.BtnCreateEvent.BorderRadius = 6;
+            this.BtnCreateEvent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnCreateEvent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnCreateEvent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnCreateEvent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnCreateEvent.FillColor = System.Drawing.Color.DarkSlateBlue;
+            this.BtnCreateEvent.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreateEvent.ForeColor = System.Drawing.Color.White;
+            this.BtnCreateEvent.Location = new System.Drawing.Point(660, 12);
+            this.BtnCreateEvent.Name = "BtnCreateEvent";
+            this.BtnCreateEvent.Size = new System.Drawing.Size(142, 30);
+            this.BtnCreateEvent.TabIndex = 9;
+            this.BtnCreateEvent.Text = "Create Event";
+            this.BtnCreateEvent.Click += new System.EventHandler(this.BtnCreateEvent_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -1114,7 +1117,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button BtnCreateEvent;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;

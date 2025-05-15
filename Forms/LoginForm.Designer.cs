@@ -35,7 +35,7 @@ namespace eventure.Forms
             this.TBUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.TBConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TBPasswordReg = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TBPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.TBEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.TBLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnRegister = new Guna.UI2.WinForms.Guna2Button();
@@ -51,10 +51,10 @@ namespace eventure.Forms
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPasswordTextBox = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TBLoginPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUsernameTextBox = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRegisterForm = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TBLoginUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             tabRegistration = new System.Windows.Forms.TabPage();
             tabRegistration.SuspendLayout();
@@ -68,7 +68,7 @@ namespace eventure.Forms
             tabRegistration.Controls.Add(this.TBUsername);
             tabRegistration.Controls.Add(this.guna2GradientPanel1);
             tabRegistration.Controls.Add(this.TBConfirmPassword);
-            tabRegistration.Controls.Add(this.TBPasswordReg);
+            tabRegistration.Controls.Add(this.TBPassword);
             tabRegistration.Controls.Add(this.TBEmail);
             tabRegistration.Controls.Add(this.TBLastName);
             tabRegistration.Controls.Add(this.BtnRegister);
@@ -142,31 +142,31 @@ namespace eventure.Forms
             this.TBConfirmPassword.TabIndex = 12;
             this.TBConfirmPassword.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // TBPasswordReg
+            // TBPassword
             // 
-            this.TBPasswordReg.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.TBPasswordReg.BorderRadius = 12;
-            this.TBPasswordReg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TBPasswordReg.DefaultText = "";
-            this.TBPasswordReg.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TBPasswordReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TBPasswordReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TBPasswordReg.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TBPasswordReg.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TBPasswordReg.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.TBPasswordReg.ForeColor = System.Drawing.Color.Black;
-            this.TBPasswordReg.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TBPasswordReg.Location = new System.Drawing.Point(558, 361);
-            this.TBPasswordReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TBPasswordReg.Name = "TBPasswordReg";
-            this.TBPasswordReg.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
-            this.TBPasswordReg.PasswordChar = '●';
-            this.TBPasswordReg.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TBPasswordReg.PlaceholderText = "Password";
-            this.TBPasswordReg.SelectedText = "";
-            this.TBPasswordReg.Size = new System.Drawing.Size(375, 36);
-            this.TBPasswordReg.TabIndex = 11;
-            this.TBPasswordReg.TextOffset = new System.Drawing.Point(10, 0);
+            this.TBPassword.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TBPassword.BorderRadius = 12;
+            this.TBPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TBPassword.DefaultText = "";
+            this.TBPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TBPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TBPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.TBPassword.ForeColor = System.Drawing.Color.Black;
+            this.TBPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBPassword.Location = new System.Drawing.Point(558, 361);
+            this.TBPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBPassword.Name = "TBPassword";
+            this.TBPassword.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
+            this.TBPassword.PasswordChar = '●';
+            this.TBPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.TBPassword.PlaceholderText = "Password";
+            this.TBPassword.SelectedText = "";
+            this.TBPassword.Size = new System.Drawing.Size(375, 36);
+            this.TBPassword.TabIndex = 11;
+            this.TBPassword.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // TBEmail
             // 
@@ -330,10 +330,10 @@ namespace eventure.Forms
             this.tabLogin.Controls.Add(this.lblTitle);
             this.tabLogin.Controls.Add(this.guna2Panel1);
             this.tabLogin.Controls.Add(this.lblPasswordTextBox);
-            this.tabLogin.Controls.Add(this.tbPassword);
+            this.tabLogin.Controls.Add(this.TBLoginPassword);
             this.tabLogin.Controls.Add(this.lblUsernameTextBox);
             this.tabLogin.Controls.Add(this.btnRegisterForm);
-            this.tabLogin.Controls.Add(this.guna2TextBox1);
+            this.tabLogin.Controls.Add(this.TBLoginUsername);
             this.tabLogin.Controls.Add(this.btnLogin);
             this.tabLogin.Location = new System.Drawing.Point(4, 22);
             this.tabLogin.Name = "tabLogin";
@@ -417,29 +417,29 @@ namespace eventure.Forms
             this.lblPasswordTextBox.Text = "Password";
             this.lblPasswordTextBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tbPassword
+            // TBLoginPassword
             // 
-            this.tbPassword.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tbPassword.BorderRadius = 12;
-            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "";
-            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbPassword.ForeColor = System.Drawing.Color.Black;
-            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(60, 335);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '●';
-            this.tbPassword.PlaceholderText = "";
-            this.tbPassword.SelectedText = "";
-            this.tbPassword.Size = new System.Drawing.Size(343, 36);
-            this.tbPassword.TabIndex = 2;
-            this.tbPassword.TextOffset = new System.Drawing.Point(10, 0);
+            this.TBLoginPassword.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TBLoginPassword.BorderRadius = 12;
+            this.TBLoginPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TBLoginPassword.DefaultText = "";
+            this.TBLoginPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TBLoginPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TBLoginPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBLoginPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBLoginPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBLoginPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBLoginPassword.ForeColor = System.Drawing.Color.Black;
+            this.TBLoginPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBLoginPassword.Location = new System.Drawing.Point(60, 335);
+            this.TBLoginPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBLoginPassword.Name = "TBLoginPassword";
+            this.TBLoginPassword.PasswordChar = '●';
+            this.TBLoginPassword.PlaceholderText = "";
+            this.TBLoginPassword.SelectedText = "";
+            this.TBLoginPassword.Size = new System.Drawing.Size(343, 36);
+            this.TBLoginPassword.TabIndex = 2;
+            this.TBLoginPassword.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // lblUsernameTextBox
             // 
@@ -475,29 +475,29 @@ namespace eventure.Forms
             this.btnRegisterForm.Text = "Register here!";
             this.btnRegisterForm.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2TextBox1
+            // TBLoginUsername
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.guna2TextBox1.BorderRadius = 12;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(60, 253);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(343, 36);
-            this.guna2TextBox1.TabIndex = 0;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(10, 0);
+            this.TBLoginUsername.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TBLoginUsername.BorderRadius = 12;
+            this.TBLoginUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TBLoginUsername.DefaultText = "";
+            this.TBLoginUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TBLoginUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TBLoginUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBLoginUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBLoginUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBLoginUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBLoginUsername.ForeColor = System.Drawing.Color.Black;
+            this.TBLoginUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBLoginUsername.Location = new System.Drawing.Point(60, 253);
+            this.TBLoginUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TBLoginUsername.Name = "TBLoginUsername";
+            this.TBLoginUsername.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
+            this.TBLoginUsername.PlaceholderText = "";
+            this.TBLoginUsername.SelectedText = "";
+            this.TBLoginUsername.Size = new System.Drawing.Size(343, 36);
+            this.TBLoginUsername.TabIndex = 0;
+            this.TBLoginUsername.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // btnLogin
             // 
@@ -541,9 +541,9 @@ namespace eventure.Forms
         private Guna.UI2.WinForms.Guna2Button btnRegisterForm;
         private Guna.UI2.WinForms.Guna2Button btnLoginForm;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox TBLoginUsername;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUsernameTextBox;
-        private Guna.UI2.WinForms.Guna2TextBox tbPassword;
+        private Guna.UI2.WinForms.Guna2TextBox TBLoginPassword;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPasswordTextBox;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTitle;
@@ -552,7 +552,7 @@ namespace eventure.Forms
         private Guna.UI2.WinForms.Guna2Button BtnRegister;
         private Guna.UI2.WinForms.Guna2TextBox TBFirstName;
         private Guna.UI2.WinForms.Guna2TextBox TBConfirmPassword;
-        private Guna.UI2.WinForms.Guna2TextBox TBPasswordReg;
+        private Guna.UI2.WinForms.Guna2TextBox TBPassword;
         private Guna.UI2.WinForms.Guna2TextBox TBEmail;
         private Guna.UI2.WinForms.Guna2TextBox TBLastName;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;

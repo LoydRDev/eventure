@@ -58,7 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Validations.cs" />
     <Compile Include="DataAccess\EventDAO.cs" />
     <Compile Include="DataAccess\UserDAO.cs" />
     <Compile Include="Database\DatabaseHelper.cs" />

@@ -1,19 +1,13 @@
-﻿using eventure.DataAccess;
-using eventure.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
+
+using eventure.DataAccess;
+using eventure.Models;
 
 namespace eventure.Forms
 {
-    public partial class LoginForm: Form
+    public partial class LoginForm : Form
     {
         public LoginForm()
         {
@@ -32,37 +26,126 @@ namespace eventure.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var dashboard = new Dashboard();
-            dashboard.Closed += (s, args) => this.Close();
-            dashboard.Show();
+            string username = TBLoginUsername.Text;
+            string password = TBLoginPassword.Text;
+
+            UserDAO userDAO = new UserDAO();
+            User loggedInUser = userDAO.AuthenticateUser(username, password);
+
+            if (loggedInUser != null)
+            {
+                MessageBox.Show($"Welcome, {loggedInUser.FirstName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Hide();
+                var dashboard = new Dashboard(username);
+                dashboard.FormClosed += (s, args) => this.Close();
+                dashboard.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            User newUser = new User
+            if (Validations())
             {
-                FirstName = TBFirstName.Text,
-                LastName = TBLastName.Text,
-                Username = TBUsername.Text,
-                Email = TBEmail.Text,
-                Password = TBConfirmPassword.Text,
-                DateCreated = DateTime.Now,
-            };
-
-            try
-            {
-                new UserDAO().AddUser(newUser);
-                var result = MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (result == DialogResult.OK)
+                User newUser = new User
                 {
-                    formControl.SelectedIndex = 0;
+                    FirstName = TBFirstName.Text,
+                    LastName = TBLastName.Text,
+                    Username = TBUsername.Text,
+                    Email = TBEmail.Text,
+                    Password = TBConfirmPassword.Text,
+                    DateCreated = DateTime.Now,
+                };
+
+                try
+                {
+                    new UserDAO().AddUser(newUser);
+                    var result = MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (result == DialogResult.OK)
+                    {
+                        formControl.SelectedIndex = 0;
+                    }
                 }
-            }
-            catch (Exception ex)
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error creating user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+        }
+
+        private bool Validations()
+        {
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(TBFirstName.Text))
             {
-                MessageBox.Show($"Error creating user: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TBFirstName.BorderColor = Color.Red;
+                TBFirstName.Focus();
+                isValid = false;
             }
+            else
+            {
+                TBFirstName.BorderColor = Color.Green;
+            }
+            if (string.IsNullOrWhiteSpace(TBLastName.Text))
+            {
+                TBLastName.BorderColor = Color.Red;
+                TBLastName.Focus();
+                isValid = false;
+            }
+            else
+            {
+                TBLastName.BorderColor = Color.Green;
+            }
+            if (string.IsNullOrWhiteSpace(TBUsername.Text))
+            {
+                TBUsername.BorderColor = Color.Red;
+                TBUsername.Focus();
+                isValid = false;
+            }
+            else
+            {
+                TBUsername.BorderColor = Color.Green;
+            }
+            if (string.IsNullOrWhiteSpace(TBEmail.Text))
+            {
+                TBEmail.BorderColor = Color.Red;
+                TBEmail.Focus();
+                isValid = false;
+            }
+            else
+            {
+                TBEmail.BorderColor = Color.Green;
+            }
+            if (string.IsNullOrWhiteSpace(TBPassword.Text))
+            {
+                TBPassword.BorderColor = Color.Red;
+                TBPassword.Focus();
+                isValid = false;
+            }
+            else
+            {
+                TBPassword.BorderColor = Color.Green;
+            }
+            if (string.IsNullOrWhiteSpace(TBConfirmPassword.Text))
+            {
+                TBConfirmPassword.BorderColor = Color.Red;
+                TBConfirmPassword.Focus();
+                isValid = false;
+            }
+            else
+            {
+                TBConfirmPassword.BorderColor = Color.Green;
+            }
+            if (!isValid)
+            {
+                MessageBox.Show("Please fill in all required fields correctly.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return isValid;
         }
     }
 }

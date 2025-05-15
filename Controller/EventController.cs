@@ -75,7 +75,7 @@ namespace eventure.Controller
                 guna2HtmlLabelEventCategory.Name = "guna2HtmlLabelEventCategory"+i;
                 guna2HtmlLabelEventCategory.Size = new System.Drawing.Size(97, 19);
                 guna2HtmlLabelEventCategory.TabIndex = 2;
-                guna2HtmlLabelEventCategory.Text = evt.Category;
+                guna2HtmlLabelEventCategory.Text = evt.EventCategory;
 
                 var guna2HtmlLabelEventLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
                 guna2HtmlLabelEventLocation.BackColor = System.Drawing.Color.Transparent;
@@ -83,7 +83,7 @@ namespace eventure.Controller
                 guna2HtmlLabelEventLocation.Name = "guna2HtmlLabelEventLocation"+i;
                 guna2HtmlLabelEventLocation.Size = new System.Drawing.Size(78, 15);
                 guna2HtmlLabelEventLocation.TabIndex = 3;
-                guna2HtmlLabelEventLocation.Text = evt.Location;
+                guna2HtmlLabelEventLocation.Text = evt.EventLocation;
 
                 var guna2HtmlLabelEventStart = new Guna.UI2.WinForms.Guna2HtmlLabel();
                 guna2HtmlLabelEventStart.BackColor = System.Drawing.Color.Transparent;
@@ -115,6 +115,11 @@ namespace eventure.Controller
         private void JoinEventButton(Event e)
         {
             MessageBox.Show($"You have joined the event: {e.EventName}");
+        }
+
+        public string ConvertDateTimeToString(DateTime dateTime)
+        {
+            return dateTime.ToString("yyyy-MM-dd HH:mm:ss");
         }
     }
 }
