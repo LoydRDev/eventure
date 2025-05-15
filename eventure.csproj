@@ -61,6 +61,11 @@
     <Compile Include="DataAccess\EventDAO.cs" />
     <Compile Include="DataAccess\UserDAO.cs" />
     <Compile Include="Database\DatabaseHelper.cs" />
+    <Compile Include="EventureDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventureDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CreateEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +107,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="EventureDataSet.xsc">
+      <DependentUpon>EventureDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EventureDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventureDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EventureDataSet.xss">
+      <DependentUpon>EventureDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

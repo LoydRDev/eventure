@@ -6,7 +6,7 @@ namespace eventure.Database
 {
     internal class DatabaseHelper
     {
-        public static string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\black\OneDrive\Documents\Eventure.accdb";
+        public static string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Eventure.accdb";
         public static OleDbConnection connection = null;
 
         public static OleDbConnection GetConnection()

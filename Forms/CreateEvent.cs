@@ -12,7 +12,7 @@ namespace eventure.Forms
     public partial class CreateEvent : Form
     {
         private EventController eventCon = new EventController();
-        private Event eventData;
+        private Event eventData = new Event();
         string username;
         public CreateEvent(string username)
         {
@@ -86,7 +86,6 @@ namespace eventure.Forms
                 TBEventName.BorderColor = Color.Red;
                 isValid = false;
             }
-
 
             return isValid;
         }
