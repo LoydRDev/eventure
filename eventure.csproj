@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -41,6 +41,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OleDb, Version=9.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.OleDb.9.0.5\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
@@ -55,14 +58,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Validations.cs" />
     <Compile Include="DataAccess\EventDAO.cs" />
     <Compile Include="DataAccess\UserDAO.cs" />
     <Compile Include="Database\DatabaseHelper.cs" />
-    <Compile Include="Forms\CreateEvent\EventDetails.cs">
+    <Compile Include="Forms\CreateEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CreateEvent\EventDetails.Designer.cs">
-      <DependentUpon>EventDetails.cs</DependentUpon>
+    <Compile Include="Forms\CreateEvent.Designer.cs">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
@@ -80,8 +84,10 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controller\LoadDashboard.cs" />
     <Compile Include="Controller\EventController.cs" />
+    <EmbeddedResource Include="Forms\CreateEvent.resx">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
   <ItemGroup>
     <Content Include="Database\EventTable.txt" />
     <Content Include="Database\UserTable.txt" />
+    <Content Include="Eventure.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

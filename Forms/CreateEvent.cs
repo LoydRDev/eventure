@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace eventure.Forms.CreateEvent
+namespace eventure.Forms
 {
-    public partial class EventDetails: Form
+    public partial class CreateEvent: Form
     {
-        public EventDetails()
+        public CreateEvent()
         {
             InitializeComponent();
         }

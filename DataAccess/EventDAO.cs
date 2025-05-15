@@ -98,8 +98,8 @@ namespace eventure.DataAccess
                         EventName = reader["EventName"].ToString(),
                         Category = reader["Category"].ToString(),
                         Description = reader["Description"].ToString(),
-                        EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
-                        EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
+                        EventStart = reader["EventStart"].ToString(),
+                        EventEnd = reader["EventEnd"].ToString(),
                         Location = reader["Location"].ToString(),
                         Capacity = Convert.ToInt32(reader["Capacity"]),
                         CreatorID = Convert.ToInt32(reader["CreatorID"])

@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\noemi\\Desktop\\eventure\\",
+  "WorkspaceRootPath": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\noemi\\desktop\\eventure\\forms\\createevent\\eventdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\createevent\\eventdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:database\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\controller\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:controller\\validations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Validations.cs",
+              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Controller\\Validations.cs",
+              "RelativeDocumentMoniker": "Controller\\Validations.cs",
+              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Controller\\Validations.cs",
+              "RelativeToolTip": "Controller\\Validations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:26:07.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "Forms\\LoginForm.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:16:28.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Forms\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T11:08:30.544Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventDetails.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\noemi\\Desktop\\eventure\\Forms\\CreateEvent\\EventDetails.cs",
-              "RelativeDocumentMoniker": "Forms\\CreateEvent\\EventDetails.cs",
-              "ToolTip": "C:\\Users\\noemi\\Desktop\\eventure\\Forms\\CreateEvent\\EventDetails.cs [Design]",
-              "RelativeToolTip": "Forms\\CreateEvent\\EventDetails.cs [Design]",
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Database\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "Database\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Database\\DatabaseHelper.cs",
+              "RelativeToolTip": "Database\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:44:11.072Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-15T11:05:37.7Z",
+              "EditorCaption": ""
             }
           ]
         }

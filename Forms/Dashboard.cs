@@ -16,12 +16,7 @@ namespace eventure.Forms
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            eventCon.LoadAllEvents(flowLayoutPanel1);
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
+            eventCon.LoadAllEvents(flowLayoutPanel1);   
 
         }
     }

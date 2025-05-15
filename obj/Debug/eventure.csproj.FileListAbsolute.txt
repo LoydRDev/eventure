@@ -28,3 +28,7 @@ C:\Users\noemi\Desktop\eventure\obj\Debug\eventure.csproj.CoreCompileInputs.cach
 C:\Users\noemi\Desktop\eventure\obj\Debug\eventure.csproj.Up2Date
 C:\Users\noemi\Desktop\eventure\obj\Debug\eventure.exe
 C:\Users\noemi\Desktop\eventure\obj\Debug\eventure.pdb
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\Eventure.accdb
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.Forms.CreateEvent.resources
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\System.Data.OleDb.dll
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\System.Data.OleDb.xml
