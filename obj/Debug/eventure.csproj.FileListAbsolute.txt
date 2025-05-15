@@ -1,0 +1,15 @@
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\eventure.exe.config
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\eventure.exe
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\eventure.pdb
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.csproj.AssemblyReference.cache
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.Properties.Resources.resources
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.csproj.GenerateResource.cache
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.csproj.CoreCompileInputs.cache
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.exe
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.pdb
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.Forms.LoginForm.resources
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\Guna.UI2.dll
+C:\Users\black\OneDrive\Desktop\eventure\bin\Debug\Guna.Charts.WinForms.xml
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.csproj.Up2Date
+C:\Users\black\OneDrive\Desktop\eventure\obj\Debug\eventure.Forms.Dashboard.resources

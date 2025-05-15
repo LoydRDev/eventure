@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eventure", "eventure.csproj", "{F43BCB13-1632-4106-89B6-949BB625D11C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F43BCB13-1632-4106-89B6-949BB625D11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43BCB13-1632-4106-89B6-949BB625D11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43BCB13-1632-4106-89B6-949BB625D11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43BCB13-1632-4106-89B6-949BB625D11C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7F894B2-76F8-4C51-8873-05E08BA4AC0E}
+	EndGlobalSection
+EndGlobal
