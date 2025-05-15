@@ -24,11 +24,9 @@ namespace eventure.DataAccess
                     {
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.EventName;
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.Description;
-                        cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventDate;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventStart;
                         cmd.Parameters.Add("?", OleDbType.Date).Value = eventObj.EventEnd;
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.Location;
-                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.AgeRestriction;
                         cmd.Parameters.Add("?", OleDbType.Integer).Value = eventObj.Capacity;
                         cmd.Parameters.Add("?", OleDbType.VarWChar).Value = eventObj.Category;
                         cmd.Parameters.Add("?", OleDbType.Integer).Value = eventObj.CreatorID;
@@ -100,11 +98,9 @@ namespace eventure.DataAccess
                         EventName = reader["EventName"].ToString(),
                         Category = reader["Category"].ToString(),
                         Description = reader["Description"].ToString(),
-                        EventDate = Convert.ToDateTime(reader["EventDate"].ToString()),
                         EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
                         EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
                         Location = reader["Location"].ToString(),
-                        AgeRestriction = reader["AgeRestriction"].ToString(),
                         Capacity = Convert.ToInt32(reader["Capacity"]),
                         CreatorID = Convert.ToInt32(reader["CreatorID"])
                     };

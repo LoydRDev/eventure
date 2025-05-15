@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Data.OleDb;
 
-using eventures.Models;
-using eventures.Database;
 using System.Windows.Forms;
 using eventure.Database;
 using eventure.Models;
 
-namespace eventures.DataAccess
+namespace eventure.DataAccess
 {
     public class UserDAO
     {
