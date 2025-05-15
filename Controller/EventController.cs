@@ -5,9 +5,9 @@ using eventure.DataAccess;
 using eventure.Forms;
 using eventure.Models;
 
-namespace eventure.UIObj
+namespace eventure.Controller
 {
-    class LoadEvents
+    class EventController
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
         public void LoadAllEvents(FlowLayoutPanel flowLayoutPanel)
@@ -51,6 +51,7 @@ namespace eventure.UIObj
                 guna2Button.Size = new System.Drawing.Size(169, 18);
                 guna2Button.TabIndex = 6;
                 guna2Button.Text = "Join Event";
+                guna2Button.Click += new System.EventHandler(JoinEvent());
 
                 var guna2HtmlLabelEventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
                 guna2HtmlLabelEventName.BackColor = System.Drawing.Color.Transparent;
@@ -106,6 +107,10 @@ namespace eventure.UIObj
 
                 flowLayoutPanel.Controls.Add(guna2GradientPanel);
             }
+        }
+        public void JoinEvent() 
+        { 
+            
         }
     }
 }

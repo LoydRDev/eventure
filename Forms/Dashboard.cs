@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using eventure.UIObj;
+using eventure.Controller;
 
 namespace eventure.Forms
 {
     public partial class Dashboard: Form
     {
-        LoadEvents loadEvents = new LoadEvents();
+        EventController eventCon = new EventController();
 
         public Dashboard()
         {
@@ -16,7 +16,13 @@ namespace eventure.Forms
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            loadEvents.LoadAllEvents(flowLayoutPanel1);
+            eventCon.LoadAllEvents(flowLayoutPanel1);
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

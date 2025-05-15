@@ -80,8 +80,8 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIObj\LoadDashboard.cs" />
-    <Compile Include="UIObj\LoadEvents.cs" />
+    <Compile Include="Controller\LoadDashboard.cs" />
+    <Compile Include="Controller\EventController.cs" />
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
