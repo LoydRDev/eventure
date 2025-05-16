@@ -32,7 +32,6 @@ namespace eventure.Controller
             {
                 Event evt = events[i];
 
-
                 var guna2GradientPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
                 guna2GradientPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
                 guna2GradientPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -291,9 +290,120 @@ namespace eventure.Controller
                 MessageBox.Show("Registration not rejected.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        
+
         //getCurrentUserEvents
 
+        public void LoadCurrentUserEvents(FlowLayoutPanel flowLayoutPanel) 
+        {
+            flowLayoutPanel.Controls.Clear();
+            var currentUser = new UserDAO().GetCurrentUser(userID);
+            foreach (var e in events) 
+            {
+                if (currentUser != null && currentUser.UserID == e.CreatorID)
+                {
+                    var userEvents = new EventDAO().getCurrentUserEvents(currentUser.UserID);
+                    for (int i = 0; i < userEvents.Count; i++) 
+                    { 
+                        Event events = userEvents[i];
+
+                        var guna2GradientPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+                        guna2GradientPanel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+                        guna2GradientPanel.FillColor2 = System.Drawing.Color.Silver;
+                        guna2GradientPanel.ForeColor = System.Drawing.SystemColors.ControlDark;
+                        guna2GradientPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+                        guna2GradientPanel.Location = new System.Drawing.Point(7, 10);
+                        guna2GradientPanel.Margin = new System.Windows.Forms.Padding(7, 10, 3, 3);
+                        guna2GradientPanel.Name = "guna2GradientPanel4"+i;
+                        guna2GradientPanel.Size = new System.Drawing.Size(181, 217);
+                        guna2GradientPanel.TabIndex = 2;
+
+                        var guna2ImageButton = new Guna.UI2.WinForms.Guna2ImageButton();
+                        guna2ImageButton.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+                        guna2ImageButton.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+                        guna2ImageButton.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton9.Image")));
+                        guna2ImageButton.ImageOffset = new System.Drawing.Point(0, 0);
+                        guna2ImageButton.ImageRotate = 0F;
+                        guna2ImageButton.Location = new System.Drawing.Point(46, 32);
+                        guna2ImageButton.Name = "guna2ImageButton9" + i;
+                        guna2ImageButton.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+                        guna2ImageButton.Size = new System.Drawing.Size(89, 78);
+                        guna2ImageButton.TabIndex = 8;
+
+                        var guna2Button = new Guna.UI2.WinForms.Guna2Button();
+                        guna2Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+                        guna2Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+                        guna2Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+                        guna2Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+                        guna2Button.Font = new System.Drawing.Font("Segoe UI", 9F);
+                        guna2Button.ForeColor = System.Drawing.Color.White;
+                        guna2Button.Location = new System.Drawing.Point(4, 189);
+                        guna2Button.Name = "guna2Button2" + i;
+                        guna2Button.Size = new System.Drawing.Size(169, 18);
+                        guna2Button.TabIndex = 6;
+                        guna2Button.Text = CustomizeButton(e);
+                        guna2Button.Click += (s, args) => EventButton(e);
+
+                        var LblEventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                        LblEventEnd.BackColor = System.Drawing.Color.Transparent;
+                        LblEventEnd.Location = new System.Drawing.Point(115, 161);
+                        LblEventEnd.Name = "guna2HtmlLabel11" + i;
+                        LblEventEnd.Size = new System.Drawing.Size(56, 15);
+                        LblEventEnd.TabIndex = 5;
+                        LblEventEnd.Text = events.EventEnd.ToString();
+
+                        var LblEventStart = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                        LblEventStart.BackColor = System.Drawing.Color.Transparent;
+                        LblEventStart.Location = new System.Drawing.Point(3, 162);
+                        LblEventStart.Name = "guna2HtmlLabel12" + i;
+                        LblEventStart.Size = new System.Drawing.Size(59, 15);
+                        LblEventStart.TabIndex = 4;
+                        LblEventStart.Text = events.EventStart.ToString();
+
+                        var LblEventLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                        LblEventLocation.BackColor = System.Drawing.Color.Transparent;
+                        LblEventLocation.Location = new System.Drawing.Point(3, 141);
+                        LblEventLocation.Name = "guna2HtmlLabel13" + i;
+                        LblEventLocation.Size = new System.Drawing.Size(78, 15);
+                        LblEventLocation.TabIndex = 3;
+                        LblEventLocation.Text = events.EventLocation;
+
+                        var LblEventCategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                        LblEventCategory.AutoSize = false;
+                        LblEventCategory.BackColor = System.Drawing.Color.Transparent;
+                        LblEventCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        LblEventCategory.ForeColor = System.Drawing.Color.Black;
+                        LblEventCategory.Location = new System.Drawing.Point(4, 115);
+                        LblEventCategory.Name = "guna2HtmlLabel14" + i;
+                        LblEventCategory.Size = new System.Drawing.Size(169, 19);
+                        LblEventCategory.TabIndex = 2;
+                        LblEventCategory.Text = events.EventCategory;
+                        LblEventCategory.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+
+                        var LblEventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                        LblEventName.AutoSize = false;
+                        LblEventName.BackColor = System.Drawing.Color.Transparent;
+                        LblEventName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        LblEventName.ForeColor = System.Drawing.Color.Black;
+                        LblEventName.Location = new System.Drawing.Point(4, 13);
+                        LblEventName.Name = "guna2HtmlLabel15" + i;
+                        LblEventName.Size = new System.Drawing.Size(172, 19);
+                        LblEventName.TabIndex = 1;
+                        LblEventName.Text = events.EventName;
+                        LblEventName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+
+                        guna2GradientPanel.Controls.Add(guna2ImageButton);
+                        guna2GradientPanel.Controls.Add(guna2Button);
+                        guna2GradientPanel.Controls.Add(LblEventEnd);
+                        guna2GradientPanel.Controls.Add(LblEventStart);
+                        guna2GradientPanel.Controls.Add(LblEventLocation);
+                        guna2GradientPanel.Controls.Add(LblEventCategory);
+                        guna2GradientPanel.Controls.Add(LblEventName);
+
+                        flowLayoutPanel.Controls.Add(guna2GradientPanel);
+                    }
+                }
+            }
+        }
 
         public void ViewAttendeeDetails()
         {

@@ -60,22 +60,21 @@
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.LblEventMaxCapacity = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventStart = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventType = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnConfirm = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventNameConf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventCateogryConf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventLocationConf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventStartConf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventEndConf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventCapacityConf = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventCategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventStart = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventMaxCapcity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TCCreateEvent.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
@@ -574,22 +573,21 @@
             // 
             // guna2GradientPanel3
             // 
-            this.guna2GradientPanel3.Controls.Add(this.LblEventMaxCapacity);
-            this.guna2GradientPanel3.Controls.Add(this.LblEventEnd);
-            this.guna2GradientPanel3.Controls.Add(this.LblEventStart);
-            this.guna2GradientPanel3.Controls.Add(this.LblEventLocation);
-            this.guna2GradientPanel3.Controls.Add(this.LblEventType);
-            this.guna2GradientPanel3.Controls.Add(this.LblEventName);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel18);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel17);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel16);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel11);
+            this.guna2GradientPanel3.Controls.Add(this.EventMaxCapcity);
+            this.guna2GradientPanel3.Controls.Add(this.EventEnd);
+            this.guna2GradientPanel3.Controls.Add(this.EventStart);
+            this.guna2GradientPanel3.Controls.Add(this.EventCategory);
+            this.guna2GradientPanel3.Controls.Add(this.EventLocation);
+            this.guna2GradientPanel3.Controls.Add(this.EventName);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventCapacityConf);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventEndConf);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventStartConf);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventLocationConf);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventCateogryConf);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventNameConf);
             this.guna2GradientPanel3.Controls.Add(this.BtnConfirm);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel12);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel13);
             this.guna2GradientPanel3.Controls.Add(this.guna2Separator3);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel14);
-            this.guna2GradientPanel3.Controls.Add(this.guna2HtmlLabel15);
+            this.guna2GradientPanel3.Controls.Add(this.LblEventName);
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
@@ -598,136 +596,6 @@
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(572, 598);
             this.guna2GradientPanel3.TabIndex = 1;
-            // 
-            // LblEventMaxCapacity
-            // 
-            this.LblEventMaxCapacity.AutoSize = false;
-            this.LblEventMaxCapacity.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventMaxCapacity.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventMaxCapacity.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventMaxCapacity.Location = new System.Drawing.Point(344, 430);
-            this.LblEventMaxCapacity.Name = "LblEventMaxCapacity";
-            this.LblEventMaxCapacity.Size = new System.Drawing.Size(183, 18);
-            this.LblEventMaxCapacity.TabIndex = 26;
-            this.LblEventMaxCapacity.Text = "Event Name";
-            this.LblEventMaxCapacity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblEventEnd
-            // 
-            this.LblEventEnd.AutoSize = false;
-            this.LblEventEnd.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventEnd.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventEnd.Location = new System.Drawing.Point(344, 379);
-            this.LblEventEnd.Name = "LblEventEnd";
-            this.LblEventEnd.Size = new System.Drawing.Size(183, 18);
-            this.LblEventEnd.TabIndex = 25;
-            this.LblEventEnd.Text = "Event Name";
-            this.LblEventEnd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblEventStart
-            // 
-            this.LblEventStart.AutoSize = false;
-            this.LblEventStart.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventStart.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventStart.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventStart.Location = new System.Drawing.Point(344, 326);
-            this.LblEventStart.Name = "LblEventStart";
-            this.LblEventStart.Size = new System.Drawing.Size(183, 18);
-            this.LblEventStart.TabIndex = 24;
-            this.LblEventStart.Text = "Event Name";
-            this.LblEventStart.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblEventLocation
-            // 
-            this.LblEventLocation.AutoSize = false;
-            this.LblEventLocation.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventLocation.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventLocation.Location = new System.Drawing.Point(344, 275);
-            this.LblEventLocation.Name = "LblEventLocation";
-            this.LblEventLocation.Size = new System.Drawing.Size(183, 18);
-            this.LblEventLocation.TabIndex = 23;
-            this.LblEventLocation.Text = "Event Name";
-            this.LblEventLocation.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblEventType
-            // 
-            this.LblEventType.AutoSize = false;
-            this.LblEventType.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventType.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventType.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventType.Location = new System.Drawing.Point(344, 227);
-            this.LblEventType.Name = "LblEventType";
-            this.LblEventType.Size = new System.Drawing.Size(183, 18);
-            this.LblEventType.TabIndex = 22;
-            this.LblEventType.Text = "Event Name";
-            this.LblEventType.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblEventName
-            // 
-            this.LblEventName.AutoSize = false;
-            this.LblEventName.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventName.Location = new System.Drawing.Point(344, 173);
-            this.LblEventName.Name = "LblEventName";
-            this.LblEventName.Size = new System.Drawing.Size(183, 18);
-            this.LblEventName.TabIndex = 21;
-            this.LblEventName.Text = "Event Name";
-            this.LblEventName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel18
-            // 
-            this.guna2HtmlLabel18.AutoSize = false;
-            this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel18.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(30, 430);
-            this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            this.guna2HtmlLabel18.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel18.TabIndex = 20;
-            this.guna2HtmlLabel18.Text = "Event Max Capacity";
-            this.guna2HtmlLabel18.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel17
-            // 
-            this.guna2HtmlLabel17.AutoSize = false;
-            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(30, 379);
-            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel17.TabIndex = 19;
-            this.guna2HtmlLabel17.Text = "Event End";
-            this.guna2HtmlLabel17.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel16
-            // 
-            this.guna2HtmlLabel16.AutoSize = false;
-            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(30, 326);
-            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel16.TabIndex = 18;
-            this.guna2HtmlLabel16.Text = "Event Start";
-            this.guna2HtmlLabel16.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel11
-            // 
-            this.guna2HtmlLabel11.AutoSize = false;
-            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(30, 275);
-            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel11.TabIndex = 17;
-            this.guna2HtmlLabel11.Text = "Event Venue / Location";
-            this.guna2HtmlLabel11.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BtnConfirm
             // 
@@ -746,32 +614,6 @@
             this.BtnConfirm.Text = "Confirm";
             this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
-            // guna2HtmlLabel12
-            // 
-            this.guna2HtmlLabel12.AutoSize = false;
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(30, 227);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel12.TabIndex = 12;
-            this.guna2HtmlLabel12.Text = "Event Type";
-            this.guna2HtmlLabel12.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2HtmlLabel13
-            // 
-            this.guna2HtmlLabel13.AutoSize = false;
-            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(30, 173);
-            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel13.TabIndex = 11;
-            this.guna2HtmlLabel13.Text = "Event Name";
-            this.guna2HtmlLabel13.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // guna2Separator3
             // 
             this.guna2Separator3.Location = new System.Drawing.Point(30, 114);
@@ -779,31 +621,174 @@
             this.guna2Separator3.Size = new System.Drawing.Size(497, 10);
             this.guna2Separator3.TabIndex = 8;
             // 
-            // guna2HtmlLabel14
+            // LblEventName
             // 
-            this.guna2HtmlLabel14.AutoSize = false;
-            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(30, 100);
-            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(183, 18);
-            this.guna2HtmlLabel14.TabIndex = 7;
-            this.guna2HtmlLabel14.Text = "Create Event Confirmation";
-            this.guna2HtmlLabel14.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblEventName.AutoSize = false;
+            this.LblEventName.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventName.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventName.ForeColor = System.Drawing.Color.White;
+            this.LblEventName.Location = new System.Drawing.Point(30, 22);
+            this.LblEventName.Name = "LblEventName";
+            this.LblEventName.Size = new System.Drawing.Size(236, 42);
+            this.LblEventName.TabIndex = 6;
+            this.LblEventName.Text = "Confirmation";
+            this.LblEventName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2HtmlLabel15
+            // LblEventNameConf
             // 
-            this.guna2HtmlLabel15.AutoSize = false;
-            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel15.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(30, 22);
-            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(236, 42);
-            this.guna2HtmlLabel15.TabIndex = 6;
-            this.guna2HtmlLabel15.Text = "Confirmation";
-            this.guna2HtmlLabel15.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LblEventNameConf.AutoSize = false;
+            this.LblEventNameConf.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventNameConf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventNameConf.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventNameConf.Location = new System.Drawing.Point(30, 163);
+            this.LblEventNameConf.Name = "LblEventNameConf";
+            this.LblEventNameConf.Size = new System.Drawing.Size(183, 18);
+            this.LblEventNameConf.TabIndex = 27;
+            this.LblEventNameConf.Text = "Event Name";
+            this.LblEventNameConf.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblEventCateogryConf
+            // 
+            this.LblEventCateogryConf.AutoSize = false;
+            this.LblEventCateogryConf.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventCateogryConf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventCateogryConf.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventCateogryConf.Location = new System.Drawing.Point(30, 210);
+            this.LblEventCateogryConf.Name = "LblEventCateogryConf";
+            this.LblEventCateogryConf.Size = new System.Drawing.Size(183, 18);
+            this.LblEventCateogryConf.TabIndex = 28;
+            this.LblEventCateogryConf.Text = "Event Category";
+            this.LblEventCateogryConf.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblEventLocationConf
+            // 
+            this.LblEventLocationConf.AutoSize = false;
+            this.LblEventLocationConf.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventLocationConf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventLocationConf.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventLocationConf.Location = new System.Drawing.Point(30, 258);
+            this.LblEventLocationConf.Name = "LblEventLocationConf";
+            this.LblEventLocationConf.Size = new System.Drawing.Size(183, 18);
+            this.LblEventLocationConf.TabIndex = 29;
+            this.LblEventLocationConf.Text = "Event Location";
+            this.LblEventLocationConf.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblEventStartConf
+            // 
+            this.LblEventStartConf.AutoSize = false;
+            this.LblEventStartConf.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventStartConf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventStartConf.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventStartConf.Location = new System.Drawing.Point(30, 308);
+            this.LblEventStartConf.Name = "LblEventStartConf";
+            this.LblEventStartConf.Size = new System.Drawing.Size(183, 18);
+            this.LblEventStartConf.TabIndex = 30;
+            this.LblEventStartConf.Text = "Event Start";
+            this.LblEventStartConf.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblEventEndConf
+            // 
+            this.LblEventEndConf.AutoSize = false;
+            this.LblEventEndConf.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventEndConf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventEndConf.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventEndConf.Location = new System.Drawing.Point(30, 361);
+            this.LblEventEndConf.Name = "LblEventEndConf";
+            this.LblEventEndConf.Size = new System.Drawing.Size(183, 18);
+            this.LblEventEndConf.TabIndex = 31;
+            this.LblEventEndConf.Text = "Event End";
+            this.LblEventEndConf.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblEventCapacityConf
+            // 
+            this.LblEventCapacityConf.AutoSize = false;
+            this.LblEventCapacityConf.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventCapacityConf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventCapacityConf.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventCapacityConf.Location = new System.Drawing.Point(30, 418);
+            this.LblEventCapacityConf.Name = "LblEventCapacityConf";
+            this.LblEventCapacityConf.Size = new System.Drawing.Size(183, 18);
+            this.LblEventCapacityConf.TabIndex = 32;
+            this.LblEventCapacityConf.Text = "Event Max Capacity";
+            this.LblEventCapacityConf.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventName
+            // 
+            this.EventName.AutoSize = false;
+            this.EventName.BackColor = System.Drawing.Color.Transparent;
+            this.EventName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventName.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EventName.Location = new System.Drawing.Point(377, 163);
+            this.EventName.Name = "EventName";
+            this.EventName.Size = new System.Drawing.Size(183, 18);
+            this.EventName.TabIndex = 34;
+            this.EventName.Text = "Event Name";
+            this.EventName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventLocation
+            // 
+            this.EventLocation.AutoSize = false;
+            this.EventLocation.BackColor = System.Drawing.Color.Transparent;
+            this.EventLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventLocation.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EventLocation.Location = new System.Drawing.Point(377, 258);
+            this.EventLocation.Name = "EventLocation";
+            this.EventLocation.Size = new System.Drawing.Size(183, 18);
+            this.EventLocation.TabIndex = 35;
+            this.EventLocation.Text = "Event Name";
+            this.EventLocation.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventCategory
+            // 
+            this.EventCategory.AutoSize = false;
+            this.EventCategory.BackColor = System.Drawing.Color.Transparent;
+            this.EventCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventCategory.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EventCategory.Location = new System.Drawing.Point(377, 210);
+            this.EventCategory.Name = "EventCategory";
+            this.EventCategory.Size = new System.Drawing.Size(183, 18);
+            this.EventCategory.TabIndex = 36;
+            this.EventCategory.Text = "Event Name";
+            this.EventCategory.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventStart
+            // 
+            this.EventStart.AutoSize = false;
+            this.EventStart.BackColor = System.Drawing.Color.Transparent;
+            this.EventStart.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventStart.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EventStart.Location = new System.Drawing.Point(377, 308);
+            this.EventStart.Name = "EventStart";
+            this.EventStart.Size = new System.Drawing.Size(183, 18);
+            this.EventStart.TabIndex = 37;
+            this.EventStart.Text = "Event Name";
+            this.EventStart.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventEnd
+            // 
+            this.EventEnd.AutoSize = false;
+            this.EventEnd.BackColor = System.Drawing.Color.Transparent;
+            this.EventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventEnd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EventEnd.Location = new System.Drawing.Point(377, 361);
+            this.EventEnd.Name = "EventEnd";
+            this.EventEnd.Size = new System.Drawing.Size(183, 18);
+            this.EventEnd.TabIndex = 38;
+            this.EventEnd.Text = "Event Name";
+            this.EventEnd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventMaxCapcity
+            // 
+            this.EventMaxCapcity.AutoSize = false;
+            this.EventMaxCapcity.BackColor = System.Drawing.Color.Transparent;
+            this.EventMaxCapcity.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventMaxCapcity.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EventMaxCapcity.Location = new System.Drawing.Point(377, 418);
+            this.EventMaxCapcity.Name = "EventMaxCapcity";
+            this.EventMaxCapcity.Size = new System.Drawing.Size(183, 18);
+            this.EventMaxCapcity.TabIndex = 39;
+            this.EventMaxCapcity.Text = "Event Name";
+            this.EventMaxCapcity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CreateEvent
             // 
@@ -865,17 +850,21 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventMaxCapacity;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventEnd;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventStart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventLocation;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventType;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblEventName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2Button BtnCancel;
         private Guna.UI2.WinForms.Guna2Button BtnCancel1;
         private Guna.UI2.WinForms.Guna2Button BtnBack;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventCapacityConf;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventEndConf;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventStartConf;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventLocationConf;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventCateogryConf;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventNameConf;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventMaxCapcity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventEnd;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventStart;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventCategory;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventLocation;
     }
 }

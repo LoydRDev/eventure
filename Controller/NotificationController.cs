@@ -8,6 +8,6 @@ namespace eventure.Controller
 {
     class NotificationController
     {
-
+        
     }
 }

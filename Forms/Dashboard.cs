@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 
 using eventure.Controller;
-using eventure.Models;
 
 namespace eventure.Forms
 {
@@ -21,6 +20,7 @@ namespace eventure.Forms
             EventController eventCon = new EventController(userID);
             eventCon.LoadAllEvents(FLPBrowseEvents);
             eventCon.LoadAllConfirmations(FLPConfirmation);
+            eventCon.LoadCurrentUserEvents(FLPManageEvents);
         }
 
         private void BtnCreateEvent_Click(object sender, EventArgs e)
@@ -36,6 +36,17 @@ namespace eventure.Forms
             EventController eventCon = new EventController(userID);
             eventCon.LoadAllEvents(FLPBrowseEvents);
             eventCon.LoadAllConfirmations(FLPConfirmation);
+            eventCon.LoadCurrentUserEvents(FLPManageEvents);
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

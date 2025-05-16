@@ -308,7 +308,6 @@ namespace eventure.Forms
             this.btnLoginForm.TabIndex = 0;
             this.btnLoginForm.Text = "Login here!";
             this.btnLoginForm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLoginForm.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // formControl
             // 

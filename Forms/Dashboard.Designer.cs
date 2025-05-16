@@ -78,8 +78,7 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnCreateEvent = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2GradientPanel7 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.FLPManageEvents = new System.Windows.Forms.FlowLayoutPanel();
             this.tabHistory = new System.Windows.Forms.TabPage();
             this.tabNotifications = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel17 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -102,10 +101,27 @@
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.TotalCreatedEvents = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TotalAttendees = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TotalEventsParticipated = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblTotalCreatedEvents = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblTotalAttendees = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblTotalEventsParticipated = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2ImageButton10 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             this.tcDashboard.SuspendLayout();
             this.tabDashboard.SuspendLayout();
             this.guna2GradientPanel11.SuspendLayout();
+            this.guna2Panel24.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.tabBrowseEvents.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -119,7 +135,7 @@
             this.FLPConfirmation.SuspendLayout();
             this.PanelConfirmation.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.FLPManageEvents.SuspendLayout();
             this.tabNotifications.SuspendLayout();
             this.guna2GradientPanel17.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
@@ -129,6 +145,7 @@
             this.guna2Panel16.SuspendLayout();
             this.guna2Panel19.SuspendLayout();
             this.guna2Panel22.SuspendLayout();
+            this.guna2GradientPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ImageButton1
@@ -252,6 +269,7 @@
             this.tcDashboard.ItemSize = new System.Drawing.Size(180, 40);
             this.tcDashboard.Location = new System.Drawing.Point(0, 55);
             this.tcDashboard.Name = "tcDashboard";
+            this.tcDashboard.Padding = new System.Drawing.Point(6, 10);
             this.tcDashboard.SelectedIndex = 0;
             this.tcDashboard.Size = new System.Drawing.Size(1000, 595);
             this.tcDashboard.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
@@ -303,6 +321,8 @@
             // guna2Panel24
             // 
             this.guna2Panel24.BackColor = System.Drawing.Color.White;
+            this.guna2Panel24.Controls.Add(this.LblTotalEventsParticipated);
+            this.guna2Panel24.Controls.Add(this.TotalEventsParticipated);
             this.guna2Panel24.Location = new System.Drawing.Point(546, 13);
             this.guna2Panel24.Name = "guna2Panel24";
             this.guna2Panel24.Size = new System.Drawing.Size(255, 86);
@@ -311,6 +331,8 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.White;
+            this.guna2Panel3.Controls.Add(this.LblTotalAttendees);
+            this.guna2Panel3.Controls.Add(this.TotalAttendees);
             this.guna2Panel3.Location = new System.Drawing.Point(275, 13);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(255, 86);
@@ -319,6 +341,8 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.LblTotalCreatedEvents);
+            this.guna2Panel2.Controls.Add(this.TotalCreatedEvents);
             this.guna2Panel2.Location = new System.Drawing.Point(3, 13);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(255, 86);
@@ -417,6 +441,7 @@
             this.comboBox2.Size = new System.Drawing.Size(154, 23);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.Text = "Status";
+            this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
             // 
             // guna2HtmlLabel2
             // 
@@ -446,6 +471,7 @@
             this.comboBox1.Size = new System.Drawing.Size(154, 23);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Category";
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // FLPBrowseEvents
             // 
@@ -604,7 +630,7 @@
             this.guna2GradientPanel22.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.guna2GradientPanel22.Location = new System.Drawing.Point(13, 8);
             this.guna2GradientPanel22.Name = "guna2GradientPanel22";
-            this.guna2GradientPanel22.Size = new System.Drawing.Size(371, 49);
+            this.guna2GradientPanel22.Size = new System.Drawing.Size(362, 49);
             this.guna2GradientPanel22.TabIndex = 1;
             // 
             // guna2HtmlLabel5
@@ -724,7 +750,7 @@
             this.guna2Panel5.BackColor = System.Drawing.Color.White;
             this.guna2Panel5.Controls.Add(this.BtnCreateEvent);
             this.guna2Panel5.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel5.Controls.Add(this.flowLayoutPanel2);
+            this.guna2Panel5.Controls.Add(this.FLPManageEvents);
             this.guna2Panel5.Location = new System.Drawing.Point(2, 298);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(807, 289);
@@ -760,27 +786,15 @@
             this.guna2HtmlLabel3.Text = "Manage your events";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // flowLayoutPanel2
+            // FLPManageEvents
             // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Controls.Add(this.guna2GradientPanel7);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 50);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(799, 236);
-            this.flowLayoutPanel2.TabIndex = 0;
-            this.flowLayoutPanel2.WrapContents = false;
-            // 
-            // guna2GradientPanel7
-            // 
-            this.guna2GradientPanel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2GradientPanel7.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2GradientPanel7.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientPanel7.Location = new System.Drawing.Point(10, 10);
-            this.guna2GradientPanel7.Margin = new System.Windows.Forms.Padding(10, 10, 3, 3);
-            this.guna2GradientPanel7.Name = "guna2GradientPanel7";
-            this.guna2GradientPanel7.Size = new System.Drawing.Size(200, 200);
-            this.guna2GradientPanel7.TabIndex = 3;
+            this.FLPManageEvents.AutoScroll = true;
+            this.FLPManageEvents.Controls.Add(this.guna2GradientPanel6);
+            this.FLPManageEvents.Location = new System.Drawing.Point(3, 50);
+            this.FLPManageEvents.Name = "FLPManageEvents";
+            this.FLPManageEvents.Size = new System.Drawing.Size(799, 236);
+            this.FLPManageEvents.TabIndex = 0;
+            this.FLPManageEvents.WrapContents = false;
             // 
             // tabHistory
             // 
@@ -1007,6 +1021,183 @@
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 50);
             this.guna2VSeparator1.TabIndex = 3;
             // 
+            // TotalCreatedEvents
+            // 
+            this.TotalCreatedEvents.AutoSize = false;
+            this.TotalCreatedEvents.BackColor = System.Drawing.Color.Transparent;
+            this.TotalCreatedEvents.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCreatedEvents.ForeColor = System.Drawing.Color.Black;
+            this.TotalCreatedEvents.Location = new System.Drawing.Point(133, 17);
+            this.TotalCreatedEvents.Name = "TotalCreatedEvents";
+            this.TotalCreatedEvents.Size = new System.Drawing.Size(119, 57);
+            this.TotalCreatedEvents.TabIndex = 10;
+            this.TotalCreatedEvents.Text = "Total Created Events";
+            this.TotalCreatedEvents.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TotalAttendees
+            // 
+            this.TotalAttendees.AutoSize = false;
+            this.TotalAttendees.BackColor = System.Drawing.Color.Transparent;
+            this.TotalAttendees.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAttendees.ForeColor = System.Drawing.Color.Black;
+            this.TotalAttendees.Location = new System.Drawing.Point(133, 17);
+            this.TotalAttendees.Name = "TotalAttendees";
+            this.TotalAttendees.Size = new System.Drawing.Size(119, 57);
+            this.TotalAttendees.TabIndex = 11;
+            this.TotalAttendees.Text = "Total Created Events";
+            this.TotalAttendees.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TotalEventsParticipated
+            // 
+            this.TotalEventsParticipated.AutoSize = false;
+            this.TotalEventsParticipated.BackColor = System.Drawing.Color.Transparent;
+            this.TotalEventsParticipated.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalEventsParticipated.ForeColor = System.Drawing.Color.Black;
+            this.TotalEventsParticipated.Location = new System.Drawing.Point(133, 17);
+            this.TotalEventsParticipated.Name = "TotalEventsParticipated";
+            this.TotalEventsParticipated.Size = new System.Drawing.Size(119, 57);
+            this.TotalEventsParticipated.TabIndex = 10;
+            this.TotalEventsParticipated.Text = "Total Created Events";
+            this.TotalEventsParticipated.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // LblTotalCreatedEvents
+            // 
+            this.LblTotalCreatedEvents.AutoSize = false;
+            this.LblTotalCreatedEvents.BackColor = System.Drawing.Color.Transparent;
+            this.LblTotalCreatedEvents.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalCreatedEvents.ForeColor = System.Drawing.Color.Black;
+            this.LblTotalCreatedEvents.Location = new System.Drawing.Point(8, 15);
+            this.LblTotalCreatedEvents.Name = "LblTotalCreatedEvents";
+            this.LblTotalCreatedEvents.Size = new System.Drawing.Size(119, 59);
+            this.LblTotalCreatedEvents.TabIndex = 11;
+            this.LblTotalCreatedEvents.Text = "Total Created Events";
+            this.LblTotalCreatedEvents.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // LblTotalAttendees
+            // 
+            this.LblTotalAttendees.AutoSize = false;
+            this.LblTotalAttendees.BackColor = System.Drawing.Color.Transparent;
+            this.LblTotalAttendees.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalAttendees.ForeColor = System.Drawing.Color.Black;
+            this.LblTotalAttendees.Location = new System.Drawing.Point(8, 15);
+            this.LblTotalAttendees.Name = "LblTotalAttendees";
+            this.LblTotalAttendees.Size = new System.Drawing.Size(119, 59);
+            this.LblTotalAttendees.TabIndex = 12;
+            this.LblTotalAttendees.Text = "Total Attendees";
+            this.LblTotalAttendees.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // LblTotalEventsParticipated
+            // 
+            this.LblTotalEventsParticipated.AutoSize = false;
+            this.LblTotalEventsParticipated.BackColor = System.Drawing.Color.Transparent;
+            this.LblTotalEventsParticipated.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotalEventsParticipated.ForeColor = System.Drawing.Color.Black;
+            this.LblTotalEventsParticipated.Location = new System.Drawing.Point(8, 15);
+            this.LblTotalEventsParticipated.Name = "LblTotalEventsParticipated";
+            this.LblTotalEventsParticipated.Size = new System.Drawing.Size(119, 59);
+            this.LblTotalEventsParticipated.TabIndex = 13;
+            this.LblTotalEventsParticipated.Text = "Total Events Participated";
+            this.LblTotalEventsParticipated.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // guna2GradientPanel6
+            // 
+            this.guna2GradientPanel6.Controls.Add(this.guna2ImageButton10);
+            this.guna2GradientPanel6.Controls.Add(this.guna2Button3);
+            this.guna2GradientPanel6.Controls.Add(this.guna2HtmlLabel16);
+            this.guna2GradientPanel6.Controls.Add(this.guna2HtmlLabel17);
+            this.guna2GradientPanel6.Controls.Add(this.guna2HtmlLabel18);
+            this.guna2GradientPanel6.Controls.Add(this.guna2HtmlLabel19);
+            this.guna2GradientPanel6.Controls.Add(this.guna2HtmlLabel20);
+            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.Silver;
+            this.guna2GradientPanel6.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.guna2GradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(198, 10);
+            this.guna2GradientPanel6.Margin = new System.Windows.Forms.Padding(7, 10, 3, 3);
+            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
+            this.guna2GradientPanel6.Size = new System.Drawing.Size(181, 217);
+            this.guna2GradientPanel6.TabIndex = 9;
+            // 
+            // guna2ImageButton10
+            // 
+            this.guna2ImageButton10.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton10.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton10.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton10.Image")));
+            this.guna2ImageButton10.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton10.ImageRotate = 0F;
+            this.guna2ImageButton10.Location = new System.Drawing.Point(46, 32);
+            this.guna2ImageButton10.Name = "guna2ImageButton10";
+            this.guna2ImageButton10.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton10.Size = new System.Drawing.Size(89, 78);
+            this.guna2ImageButton10.TabIndex = 8;
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(4, 189);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(169, 18);
+            this.guna2Button3.TabIndex = 6;
+            this.guna2Button3.Text = "Join Event";
+            // 
+            // guna2HtmlLabel16
+            // 
+            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(115, 161);
+            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(56, 15);
+            this.guna2HtmlLabel16.TabIndex = 5;
+            this.guna2HtmlLabel16.Text = "Event_End";
+            // 
+            // guna2HtmlLabel17
+            // 
+            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(3, 162);
+            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(59, 15);
+            this.guna2HtmlLabel17.TabIndex = 4;
+            this.guna2HtmlLabel17.Text = "Event_Start";
+            // 
+            // guna2HtmlLabel18
+            // 
+            this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(3, 141);
+            this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(78, 15);
+            this.guna2HtmlLabel18.TabIndex = 3;
+            this.guna2HtmlLabel18.Text = "Event_Location";
+            // 
+            // guna2HtmlLabel19
+            // 
+            this.guna2HtmlLabel19.AutoSize = false;
+            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(4, 115);
+            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(169, 19);
+            this.guna2HtmlLabel19.TabIndex = 2;
+            this.guna2HtmlLabel19.Text = "Event_Category";
+            this.guna2HtmlLabel19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.AutoSize = false;
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(4, 13);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(172, 19);
+            this.guna2HtmlLabel20.TabIndex = 1;
+            this.guna2HtmlLabel20.Text = "Event_Name";
+            this.guna2HtmlLabel20.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1022,6 +1213,9 @@
             this.tcDashboard.ResumeLayout(false);
             this.tabDashboard.ResumeLayout(false);
             this.guna2GradientPanel11.ResumeLayout(false);
+            this.guna2Panel24.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
             this.tabBrowseEvents.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
@@ -1036,7 +1230,7 @@
             this.FLPConfirmation.ResumeLayout(false);
             this.PanelConfirmation.ResumeLayout(false);
             this.guna2Panel5.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.FLPManageEvents.ResumeLayout(false);
             this.tabNotifications.ResumeLayout(false);
             this.guna2GradientPanel17.ResumeLayout(false);
             this.guna2Panel8.ResumeLayout(false);
@@ -1046,6 +1240,8 @@
             this.guna2Panel16.ResumeLayout(false);
             this.guna2Panel19.ResumeLayout(false);
             this.guna2Panel22.ResumeLayout(false);
+            this.guna2GradientPanel6.ResumeLayout(false);
+            this.guna2GradientPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1054,18 +1250,20 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2TabControl tcDashboard;
-        private System.Windows.Forms.TabPage tabDashboard;
-        private System.Windows.Forms.TabPage tabBrowseEvents;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private System.Windows.Forms.TabPage tabMyEvents;
+        private Guna.UI2.WinForms.Guna2TabControl tcDashboard;
+        private System.Windows.Forms.TabPage tabDashboard;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel11;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel24;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.TabPage tabBrowseEvents;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
@@ -1075,28 +1273,38 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.FlowLayoutPanel FLPBrowseEvents;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton8;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private System.Windows.Forms.TabPage tabMyEvents;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel22;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private System.Windows.Forms.FlowLayoutPanel FLPConfirmation;
+        private Guna.UI2.WinForms.Guna2GradientPanel PanelConfirmation;
+        private Guna.UI2.WinForms.Guna2ImageButton BtnReject;
+        private Guna.UI2.WinForms.Guna2HtmlLabel UserFullname;
+        private Guna.UI2.WinForms.Guna2ImageButton BtnApprove;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2Button BtnCreateEvent;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private System.Windows.Forms.FlowLayoutPanel FLPManageEvents;
+        private System.Windows.Forms.TabPage tabHistory;
         private System.Windows.Forms.TabPage tabNotifications;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel46;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private System.Windows.Forms.FlowLayoutPanel FLPConfirmation;
-        private Guna.UI2.WinForms.Guna2Button BtnCreateEvent;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
@@ -1111,18 +1319,27 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel20;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel22;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel23;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel22;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2GradientPanel PanelConfirmation;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel24;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.TabPage tabHistory;
-        private Guna.UI2.WinForms.Guna2HtmlLabel UserFullname;
-        private Guna.UI2.WinForms.Guna2HtmlLabel EventName;
-        private Guna.UI2.WinForms.Guna2ImageButton BtnReject;
-        private Guna.UI2.WinForms.Guna2ImageButton BtnApprove;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblTotalEventsParticipated;
+        private Guna.UI2.WinForms.Guna2HtmlLabel TotalEventsParticipated;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblTotalAttendees;
+        private Guna.UI2.WinForms.Guna2HtmlLabel TotalAttendees;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblTotalCreatedEvents;
+        private Guna.UI2.WinForms.Guna2HtmlLabel TotalCreatedEvents;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel6;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton10;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
     }
 }
