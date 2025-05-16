@@ -1,0 +1,13 @@
+﻿CREATE TABLE Notifications (
+    NotificationID AUTOINCREMENT PRIMARY KEY,
+    UserID LONG NOT NULL, 
+    EventID LONG,                    
+    OwnerID LONG,                  
+    Message TEXT(255) NOT NULL,
+    IsRead YESNO,
+    CreatedAt DATETIME,
+
+    CONSTRAINT fk_user_notification FOREIGN KEY (UserID) REFERENCES Users(UserID),
+    CONSTRAINT fk_event_notification FOREIGN KEY (EventID) REFERENCES Events(EventID),
+    CONSTRAINT fk_owner_notification FOREIGN KEY (OwnerID) REFERENCES Users(UserID)
+);

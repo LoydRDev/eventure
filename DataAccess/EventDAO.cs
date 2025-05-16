@@ -53,12 +53,12 @@ namespace eventure.DataAccess
             catch (OleDbException ex)
             {
                 isSuccess = false;
-                MessageBox.Show($"Database error occurred: {ex.Message}\nError code: {ex.ErrorCode}");
+                MessageBox.Show($"Event Database error occurred: {ex.Message}\nError code: {ex.ErrorCode}");
             }
             catch (Exception ex)
             {
                 isSuccess = false;
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}");
+                MessageBox.Show($"Event An unexpected error occurred: {ex.Message}");
             }
             finally
             {
@@ -125,6 +125,7 @@ namespace eventure.DataAccess
                                 EventDescription = reader["Description"].ToString(),
                                 EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
                                 EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
+                                EventStatus = reader["Status"].ToString(),
                                 EventLocation = reader["Location"].ToString(),
                                 EventMaxCapacity = Convert.ToInt32(reader["Capacity"]),
                             };
@@ -157,6 +158,7 @@ namespace eventure.DataAccess
                                 EventDescription = reader["Description"].ToString(),
                                 EventStart = Convert.ToDateTime(reader["EventStart"].ToString()),
                                 EventEnd = Convert.ToDateTime(reader["EventEnd"].ToString()),
+                                EventStatus = reader["Status"].ToString(),
                                 EventLocation = reader["Location"].ToString(),
                                 EventMaxCapacity = Convert.ToInt32(reader["Capacity"]),
                             };

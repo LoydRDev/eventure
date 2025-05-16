@@ -33,14 +33,20 @@ namespace eventure.Forms
             EventCapacity.Text = $"0/{evt.EventMaxCapacity}";
         }
 
+        //RegisterEvent
+
         private void BtnRegisterEvent_Click(object sender, System.EventArgs e)
         {
             string eventStatus = evt.EventStatus;
-            MessageBox.Show($"DEBUG: Event status is '{evt.EventStatus}'");
             if (eventStatus == "Upcoming")
             {
-                attendeeDAO.RegisterEvent(evt.EventID, userID);
-                MessageBox.Show("You have successfully registered for the event!", "Registration Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Message wait for the Event Owner to approve
+                var result = MessageBox.Show("You have successfully registered for the event! Please wait for the event owner to approve your registration.", "Registration Pending", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new AttendeeDAO().RegisterEvent(evt.EventID, userID);
+                if (result == DialogResult.OK)
+                {
+                    MessageBox.Show("Event owner has been notified of your registration.", "Notification Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 this.Close();
             }
             else if (evt.EventStatus == "Ongoing")

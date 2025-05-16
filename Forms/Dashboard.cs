@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using eventure.Controller;
+using eventure.Models;
 
 namespace eventure.Forms
 {
@@ -18,7 +19,8 @@ namespace eventure.Forms
         private void Dashboard_Load(object sender, EventArgs e)
         {
             EventController eventCon = new EventController(userID);
-            eventCon.LoadAllEvents(flowLayoutPanel1);   
+            eventCon.LoadAllEvents(FLPBrowseEvents);
+            eventCon.LoadAllConfirmations(FLPConfirmation);
         }
 
         private void BtnCreateEvent_Click(object sender, EventArgs e)
@@ -27,7 +29,13 @@ namespace eventure.Forms
             var createEventForm = new CreateEvent(userID);
             createEventForm.FormClosed += (s, args) => this.Close();
             createEventForm.Show();
-            eventCon.LoadAllEvents(flowLayoutPanel1);
+        }
+
+        private void tcDashboard_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            EventController eventCon = new EventController(userID);
+            eventCon.LoadAllEvents(FLPBrowseEvents);
+            eventCon.LoadAllConfirmations(FLPConfirmation);
         }
     }
 }

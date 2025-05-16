@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="EventureDataSet" targetNamespace="http://tempuri.org/EventureDataSet.xsd" xmlns:mstns="http://tempuri.org/EventureDataSet.xsd" xmlns="http://tempuri.org/EventureDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="EventureDataSet1" targetNamespace="http://tempuri.org/EventureDataSet1.xsd" xmlns:mstns="http://tempuri.org/EventureDataSet1.xsd" xmlns="http://tempuri.org/EventureDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -54,7 +54,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="EventureDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EventureDataSet" msprop:Generator_DataSetName="EventureDataSet">
+  <xs:element name="EventureDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EventureDataSet1" msprop:Generator_DataSetName="EventureDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Attendees" msprop:Generator_RowEvHandlerName="AttendeesRowChangeEventHandler" msprop:Generator_RowDeletedName="AttendeesRowDeleted" msprop:Generator_RowDeletingName="AttendeesRowDeleting" msprop:Generator_RowEvArgName="AttendeesRowChangeEvent" msprop:Generator_TablePropName="Attendees" msprop:Generator_RowChangedName="AttendeesRowChanged" msprop:Generator_RowChangingName="AttendeesRowChanging" msprop:Generator_TableClassName="AttendeesDataTable" msprop:Generator_RowClassName="AttendeesRow" msprop:Generator_TableVarName="tableAttendees" msprop:Generator_UserTableName="Attendees">

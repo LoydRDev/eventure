@@ -37,12 +37,12 @@ namespace eventure.DataAccess
             catch (OleDbException ex)
             {
                 isSuccess = false;
-                MessageBox.Show($"Database error occurred: {ex.Message}\nError code: {ex.ErrorCode}");
+                MessageBox.Show($"User Database error occurred: {ex.Message}\nError code: {ex.ErrorCode}");
             }
             catch (Exception ex)
             {
                 isSuccess = false;
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}");
+                MessageBox.Show($"User An unexpected error occurred: {ex.Message}");
             }
             finally
             {
@@ -94,6 +94,36 @@ namespace eventure.DataAccess
                 using (OleDbCommand cmd = new OleDbCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@UserID", UserID);
+                    connection.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new User
+                            {
+                                UserID = reader.GetInt32(0),
+                                FirstName = reader.GetString(1),
+                                LastName = reader.GetString(2),
+                                Username = reader.GetString(3),
+                                Email = reader.GetString(4),
+                                Password = reader.GetString(5),
+                                DateCreated = reader.GetDateTime(6)
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public User GetUserByID(int userID)
+        {
+            using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = "SELECT * FROM Users WHERE UserID = @UserID";
+                using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", userID);
                     connection.Open();
                     using (OleDbDataReader reader = cmd.ExecuteReader())
                     {

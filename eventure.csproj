@@ -39,7 +39,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OleDb, Version=9.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Data.OleDb.9.0.5\lib\net462\System.Data.OleDb.dll</HintPath>
@@ -58,14 +60,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\NotificationController.cs" />
     <Compile Include="DataAccess\AttendeeDAO.cs" />
     <Compile Include="DataAccess\EventDAO.cs" />
+    <Compile Include="DataAccess\NotificationDAO.cs" />
     <Compile Include="DataAccess\UserDAO.cs" />
     <Compile Include="Database\DatabaseHelper.cs" />
     <Compile Include="EventureDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EventureDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EventureDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventureDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttendeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttendeeDetails.Designer.cs">
+      <DependentUpon>AttendeeDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateEvent.cs">
       <SubType>Form</SubType>
@@ -93,6 +108,7 @@
     </Compile>
     <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +145,17 @@
     <None Include="EventureDataSet.xss">
       <DependentUpon>EventureDataSet.xsd</DependentUpon>
     </None>
+    <None Include="EventureDataSet1.xsc">
+      <DependentUpon>EventureDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EventureDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EventureDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EventureDataSet1.xss">
+      <DependentUpon>EventureDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +176,7 @@
   <ItemGroup>
     <Content Include="Database\AttendeeTable.txt" />
     <Content Include="Database\EventTable.txt" />
+    <Content Include="Database\NotificationTable.txt" />
     <Content Include="Database\UserTable.txt" />
     <Content Include="Eventure.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

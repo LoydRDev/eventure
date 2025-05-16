@@ -45,7 +45,7 @@
             this.LblEvenLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EventCategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.EventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            EventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.guna2Panel1.Controls.Add(this.LblEvenLocation);
             this.guna2Panel1.Controls.Add(this.EventCategory);
             this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
-            this.guna2Panel1.Controls.Add(this.EventName);
+            this.guna2Panel1.Controls.Add(EventName);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -150,7 +150,7 @@
             this.EventStart.BackColor = System.Drawing.Color.Transparent;
             this.EventStart.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventStart.ForeColor = System.Drawing.Color.White;
-            this.EventStart.Location = new System.Drawing.Point(356, 346);
+            this.EventStart.Location = new System.Drawing.Point(356, 351);
             this.EventStart.Name = "EventStart";
             this.EventStart.Size = new System.Drawing.Size(154, 32);
             this.EventStart.TabIndex = 19;
@@ -163,7 +163,7 @@
             this.EventLocation.BackColor = System.Drawing.Color.Transparent;
             this.EventLocation.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventLocation.ForeColor = System.Drawing.Color.White;
-            this.EventLocation.Location = new System.Drawing.Point(29, 346);
+            this.EventLocation.Location = new System.Drawing.Point(29, 352);
             this.EventLocation.Name = "EventLocation";
             this.EventLocation.Size = new System.Drawing.Size(154, 32);
             this.EventLocation.TabIndex = 18;
@@ -259,7 +259,7 @@
             this.EventCategory.BackColor = System.Drawing.Color.Transparent;
             this.EventCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EventCategory.ForeColor = System.Drawing.Color.White;
-            this.EventCategory.Location = new System.Drawing.Point(287, 75);
+            this.EventCategory.Location = new System.Drawing.Point(287, 86);
             this.EventCategory.Name = "EventCategory";
             this.EventCategory.Size = new System.Drawing.Size(252, 39);
             this.EventCategory.TabIndex = 9;
@@ -281,16 +281,16 @@
             // 
             // EventName
             // 
-            this.EventName.AutoSize = false;
-            this.EventName.BackColor = System.Drawing.Color.Transparent;
-            this.EventName.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventName.ForeColor = System.Drawing.Color.White;
-            this.EventName.Location = new System.Drawing.Point(287, 27);
-            this.EventName.Name = "EventName";
-            this.EventName.Size = new System.Drawing.Size(252, 42);
-            this.EventName.TabIndex = 7;
-            this.EventName.Text = "Event_Name";
-            this.EventName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            EventName.AutoSize = false;
+            EventName.BackColor = System.Drawing.Color.Transparent;
+            EventName.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            EventName.ForeColor = System.Drawing.Color.White;
+            EventName.Location = new System.Drawing.Point(287, 36);
+            EventName.Name = "EventName";
+            EventName.Size = new System.Drawing.Size(252, 42);
+            EventName.TabIndex = 7;
+            EventName.Text = "Event_Name";
+            EventName.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // EventRegistration
             // 
