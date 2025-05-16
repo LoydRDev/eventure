@@ -40,12 +40,12 @@ namespace eventure.Forms
             eventData.EventEnd = DTPEventEnd.Value;
             eventData.EventMaxCapacity = Convert.ToInt32(NUPEventMaxCapacity.Text);
             TCCreateEvent.SelectedTab = TCCreateEvent.TabPages[2];
-            LblEventName.Text = eventData.EventName;
-            LblEventType.Text = eventData.EventCategory;
-            LblEventLocation.Text = eventData.EventLocation;
-            LblEventStart.Text = eventData.EventStart.ToString("dd/MM/yy HH:MM");
-            LblEventEnd.Text = eventData.EventEnd.ToString("dd/MM/yy HH:MM");
-            LblEventMaxCapacity.Text = eventData.EventMaxCapacity.ToString();
+            EventName.Text = eventData.EventName;
+            EventCategory.Text = eventData.EventCategory;
+            EventLocation.Text = eventData.EventLocation;
+            EventStart.Text = eventData.EventStart.ToString("dd/MM/yy HH:MM");
+            EventEnd.Text = eventData.EventEnd.ToString("dd/MM/yy HH:MM");
+            EventMaxCapacity.Text = eventData.EventMaxCapacity.ToString();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)

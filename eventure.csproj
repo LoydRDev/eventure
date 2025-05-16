@@ -106,6 +106,12 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MessageDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageDetails.Designer.cs">
+      <DependentUpon>MessageDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Notification.cs" />

@@ -8,6 +8,9 @@ namespace eventure.Controller
 {
     class NotificationController
     {
-        
+        public void NotifyEventOwner(int eventID, int userID)
+        {
+                
+        }
     }
 }

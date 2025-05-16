@@ -133,39 +133,6 @@ namespace eventure.DataAccess
             {
                 MessageBox.Show($"Attende2 An unexpected error occurred: {ex.Message}");
             }
-        }
-
-        public int GetAllEventConfirmations(int userID)
-        {
-            try
-            {
-                using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
-                {
-                    string query = "SELECT * FROM Attendees WHERE AttendeeID = ?";
-                    using (OleDbCommand cmd = new OleDbCommand(query, connection))
-                    {
-                        cmd.Parameters.Add("?", OleDbType.VarWChar).Value = userID;
-                        connection.Open();
-                        using (OleDbDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                // Process each row
-                            }
-                        }
-                        connection.Close();
-                    }
-                }
-            }
-            catch (OleDbException ex)
-            {
-                MessageBox.Show($"Attendee3 Database error occurred: {ex.Message}\nError code: {ex.ErrorCode}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Attendee3 An unexpected error occurred: {ex.Message}");
-            }
-            return userID;
-        }
+        } 
     }
 }

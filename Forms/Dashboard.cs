@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 using eventure.Controller;
 
+
 namespace eventure.Forms
 {
     public partial class Dashboard: Form
@@ -20,7 +21,6 @@ namespace eventure.Forms
             EventController eventCon = new EventController(userID);
             eventCon.LoadAllEvents(FLPBrowseEvents);
             eventCon.LoadAllConfirmations(FLPConfirmation);
-            eventCon.LoadCurrentUserEvents(FLPManageEvents);
         }
 
         private void BtnCreateEvent_Click(object sender, EventArgs e)
@@ -38,15 +38,35 @@ namespace eventure.Forms
             eventCon.LoadAllConfirmations(FLPConfirmation);
             eventCon.LoadCurrentUserEvents(FLPManageEvents);
         }
+        private void FilterEvents()
+        {
+            string selectedCategory = CBCategory.SelectedItem != null ? CBCategory.SelectedItem.ToString() : "";
+            string selectedStatus = CBStatus.SelectedItem != null ? CBStatus.SelectedItem.ToString() : "";
+
+            EventController eventCon = new EventController(userID);
+            eventCon.LoadEventSorted(FLPBrowseEvents, selectedCategory, selectedStatus);
+        }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            FilterEvents();
         }
 
         private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
         {
+            FilterEvents();
+        }
 
+        private void SearchBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if the Enter key was pressed
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Perform the search
+                string searchText = SearchBar.Text;
+                EventController eventCon = new EventController(userID);
+                eventCon.SearchEvents(FLPBrowseEvents, searchText);
+            }
         }
     }
 }
