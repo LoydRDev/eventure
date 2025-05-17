@@ -289,7 +289,7 @@ namespace eventure.DataAccess
             List<Event> events = new List<Event>();
             using (OleDbConnection conn = new OleDbConnection(DatabaseHelper.connectionString))
             {
-                string query = "SELECT Events.* FROM Events INNER JOIN Confirmations ON Events.EventID = Confirmations.EventID WHERE Confirmations.UserID = ?";
+                string query = "SELECT Events.* FROM Events INNER JOIN Attendees ON Events.EventID = Attendees.EventID WHERE Attendees.AttendeeID = ?";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("?", userID);

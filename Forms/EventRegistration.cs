@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using System.Collections.Generic;
+
 
 using eventure.Models;
 using eventure.DataAccess;
@@ -11,6 +11,7 @@ namespace eventure.Forms
     {
         private EventDAO eventDAO = new EventDAO();
         private AttendeeDAO attendeeDAO = new AttendeeDAO();
+        private NotificationDAO notif = new NotificationDAO();
         Event evt = new Event();
         int userID;
 
@@ -45,6 +46,7 @@ namespace eventure.Forms
                 new AttendeeDAO().RegisterEvent(evt.EventID, userID);
                 if (result == DialogResult.OK)
                 {
+                    notif.SendNotifToEventOwner(evt.EventID, userID, evt.CreatorID);
                     MessageBox.Show("Event owner has been notified of your registration.", "Notification Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close();
@@ -61,6 +63,7 @@ namespace eventure.Forms
             {
                 MessageBox.Show("This event is not available for registration.", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+
+        }   
     }
 }

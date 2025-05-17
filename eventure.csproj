@@ -119,6 +119,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controller\EventController.cs" />
+    <EmbeddedResource Include="Forms\AttendeeDetails.resx">
+      <DependentUpon>AttendeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateEvent.resx">
       <DependentUpon>CreateEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,13 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="EventureDataSet.xsc">
       <DependentUpon>EventureDataSet.xsd</DependentUpon>
     </None>
@@ -167,6 +166,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -176,9 +180,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\AttendeeTable.txt" />
     <Content Include="Database\EventTable.txt" />
@@ -187,6 +189,34 @@
     <Content Include="Eventure.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Images\7.jpg" />
+    <None Include="Images\6.jpg" />
+    <None Include="Images\5.jpg" />
+    <None Include="Images\4.jpg" />
+    <None Include="Images\3.jpg" />
+    <None Include="Images\2.jpg" />
+    <None Include="Images\1.jpg" />
+    <None Include="Images\user %282%29.png" />
+    <None Include="Images\techconference.jpg" />
+    <None Include="Images\tech.jpg" />
+    <None Include="Images\seminarworkshologo.png" />
+    <None Include="Images\seminar.jpg" />
+    <None Include="Images\search.png" />
+    <None Include="Images\mail.png" />
+    <None Include="Images\ITexpologo.png" />
+    <None Include="Images\ITexpo2.jpg" />
+    <None Include="Images\ITexpo.jpg" />
+    <None Include="Images\hackathonlogo.png" />
+    <None Include="Images\hackathon2.jpg" />
+    <None Include="Images\hackathon.jpg" />
+    <None Include="Images\exit.png" />
+    <None Include="Images\EVENTURELOGO.png" />
+    <None Include="Images\conferencelogo.png" />
+    <None Include="Images\codingcamplogo.png" />
+    <None Include="Images\Codecamp2.jpg" />
+    <None Include="Images\Codecamp.jpg" />
+    <None Include="Images\check2.png" />
+    <None Include="Images\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

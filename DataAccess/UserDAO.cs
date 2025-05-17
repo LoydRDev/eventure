@@ -57,13 +57,12 @@ namespace eventure.DataAccess
         {
             using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
             {
-                string query = "SELECT * FROM Users WHERE Username = @Username AND [Password] = @Password";
+                string query = "SELECT * FROM Users WHERE Username = ? AND [Password] = ?";
 
                 using (OleDbCommand cmd = new OleDbCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    cmd.Parameters.AddWithValue("@Password", password);
-
+                    cmd.Parameters.AddWithValue("Username", username);
+                    cmd.Parameters.AddWithValue("Password", password);
                     connection.Open();
                     using (OleDbDataReader reader = cmd.ExecuteReader())
                     {

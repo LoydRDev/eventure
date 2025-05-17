@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ImageButton7 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.tcDashboard = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabDashboard = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel11 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -52,8 +49,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tabBrowseEvents = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.SearchBar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.CBStatus = new System.Windows.Forms.ComboBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -70,8 +67,9 @@
             this.tabMyEvents = new System.Windows.Forms.TabPage();
             this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FLPEventsRegistered = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel22 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.FLPConfirmation = new System.Windows.Forms.FlowLayoutPanel();
@@ -115,6 +113,11 @@
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             this.tcDashboard.SuspendLayout();
             this.tabDashboard.SuspendLayout();
@@ -124,13 +127,16 @@
             this.guna2Panel2.SuspendLayout();
             this.tabBrowseEvents.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
+            this.SearchBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel4.SuspendLayout();
             this.FLPBrowseEvents.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
             this.tabMyEvents.SuspendLayout();
             this.guna2GradientPanel5.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
+            this.FLPEventsRegistered.SuspendLayout();
+            this.guna2GradientPanel22.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
             this.FLPConfirmation.SuspendLayout();
             this.PanelConfirmation.SuspendLayout();
@@ -146,20 +152,11 @@
             this.guna2Panel16.SuspendLayout();
             this.guna2Panel19.SuspendLayout();
             this.guna2Panel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(12, 8);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(56, 40);
-            this.guna2ImageButton1.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
@@ -176,14 +173,14 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton7);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton6);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton5);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton4);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton3);
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox5);
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox4);
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox3);
+            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox2);
+            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox1);
             this.guna2GradientPanel1.Controls.Add(this.tcDashboard);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ImageButton1);
             this.guna2GradientPanel1.Controls.Add(this.guna2VSeparator1);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
@@ -193,70 +190,30 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1000, 650);
             this.guna2GradientPanel1.TabIndex = 2;
             // 
-            // guna2ImageButton7
+            // guna2ControlBox2
             // 
-            this.guna2ImageButton7.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton7.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton7.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton7.Image")));
-            this.guna2ImageButton7.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton7.ImageRotate = 0F;
-            this.guna2ImageButton7.Location = new System.Drawing.Point(728, 9);
-            this.guna2ImageButton7.Name = "guna2ImageButton7";
-            this.guna2ImageButton7.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton7.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton7.TabIndex = 7;
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(891, 13);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox2.TabIndex = 8;
+            this.guna2ControlBox2.UseTransparentBackground = true;
             // 
-            // guna2ImageButton6
+            // guna2ControlBox1
             // 
-            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton6.Image")));
-            this.guna2ImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton6.ImageRotate = 0F;
-            this.guna2ImageButton6.Location = new System.Drawing.Point(777, 9);
-            this.guna2ImageButton6.Name = "guna2ImageButton6";
-            this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton6.TabIndex = 6;
-            // 
-            // guna2ImageButton5
-            // 
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton5.Image")));
-            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.ImageRotate = 0F;
-            this.guna2ImageButton5.Location = new System.Drawing.Point(826, 9);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton5.TabIndex = 5;
-            // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton4.Image")));
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.Location = new System.Drawing.Point(945, 9);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton4.TabIndex = 4;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.Location = new System.Drawing.Point(891, 9);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton3.TabIndex = 0;
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(943, 13);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 0;
+            this.guna2ControlBox1.UseTransparentBackground = true;
             // 
             // tcDashboard
             // 
@@ -334,7 +291,7 @@
             this.LblTotalEventsParticipated.BackColor = System.Drawing.Color.Transparent;
             this.LblTotalEventsParticipated.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTotalEventsParticipated.ForeColor = System.Drawing.Color.Black;
-            this.LblTotalEventsParticipated.Location = new System.Drawing.Point(8, 15);
+            this.LblTotalEventsParticipated.Location = new System.Drawing.Point(8, 12);
             this.LblTotalEventsParticipated.Name = "LblTotalEventsParticipated";
             this.LblTotalEventsParticipated.Size = new System.Drawing.Size(119, 59);
             this.LblTotalEventsParticipated.TabIndex = 13;
@@ -370,7 +327,7 @@
             this.LblTotalAttendees.BackColor = System.Drawing.Color.Transparent;
             this.LblTotalAttendees.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTotalAttendees.ForeColor = System.Drawing.Color.Black;
-            this.LblTotalAttendees.Location = new System.Drawing.Point(8, 15);
+            this.LblTotalAttendees.Location = new System.Drawing.Point(8, 12);
             this.LblTotalAttendees.Name = "LblTotalAttendees";
             this.LblTotalAttendees.Size = new System.Drawing.Size(119, 59);
             this.LblTotalAttendees.TabIndex = 12;
@@ -447,7 +404,6 @@
             // 
             // guna2GradientPanel2
             // 
-            this.guna2GradientPanel2.Controls.Add(this.guna2ImageButton2);
             this.guna2GradientPanel2.Controls.Add(this.SearchBar);
             this.guna2GradientPanel2.Controls.Add(this.guna2Panel4);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -458,22 +414,10 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(806, 581);
             this.guna2GradientPanel2.TabIndex = 0;
             // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.Location = new System.Drawing.Point(758, 12);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(30, 28);
-            this.guna2ImageButton2.TabIndex = 8;
-            // 
             // SearchBar
             // 
             this.SearchBar.BackColor = System.Drawing.Color.White;
+            this.SearchBar.Controls.Add(this.guna2PictureBox1);
             this.SearchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.SearchBar.DefaultText = "";
             this.SearchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -484,15 +428,29 @@
             this.SearchBar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBar.ForeColor = System.Drawing.Color.Black;
             this.SearchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SearchBar.Location = new System.Drawing.Point(5, 5);
+            this.SearchBar.Location = new System.Drawing.Point(5, 10);
             this.SearchBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SearchBar.Name = "SearchBar";
             this.SearchBar.PlaceholderText = "Search Events";
             this.SearchBar.SelectedText = "";
-            this.SearchBar.Size = new System.Drawing.Size(797, 43);
+            this.SearchBar.Size = new System.Drawing.Size(796, 43);
             this.SearchBar.TabIndex = 4;
-            this.SearchBar.TextOffset = new System.Drawing.Point(20, 2);
+            this.SearchBar.TextOffset = new System.Drawing.Point(32, 2);
             this.SearchBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBar_KeyDown);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(760, 8);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // guna2Panel4
             // 
@@ -687,30 +645,42 @@
             // guna2Panel6
             // 
             this.guna2Panel6.BackColor = System.Drawing.Color.White;
-            this.guna2Panel6.Controls.Add(this.flowLayoutPanel3);
+            this.guna2Panel6.Controls.Add(this.FLPEventsRegistered);
             this.guna2Panel6.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel6.Location = new System.Drawing.Point(405, 0);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(403, 292);
             this.guna2Panel6.TabIndex = 13;
             // 
-            // flowLayoutPanel3
+            // FLPEventsRegistered
             // 
-            this.flowLayoutPanel3.Controls.Add(this.guna2GradientPanel22);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 39);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(403, 250);
-            this.flowLayoutPanel3.TabIndex = 10;
+            this.FLPEventsRegistered.Controls.Add(this.guna2GradientPanel22);
+            this.FLPEventsRegistered.Location = new System.Drawing.Point(0, 39);
+            this.FLPEventsRegistered.Name = "FLPEventsRegistered";
+            this.FLPEventsRegistered.Padding = new System.Windows.Forms.Padding(10, 5, 0, 0);
+            this.FLPEventsRegistered.Size = new System.Drawing.Size(403, 250);
+            this.FLPEventsRegistered.TabIndex = 10;
             // 
             // guna2GradientPanel22
             // 
-            this.guna2GradientPanel22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2GradientPanel22.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2GradientPanel22.Controls.Add(this.guna2HtmlLabel21);
+            this.guna2GradientPanel22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel22.FillColor2 = System.Drawing.Color.Silver;
             this.guna2GradientPanel22.Location = new System.Drawing.Point(13, 8);
             this.guna2GradientPanel22.Name = "guna2GradientPanel22";
             this.guna2GradientPanel22.Size = new System.Drawing.Size(362, 49);
             this.guna2GradientPanel22.TabIndex = 1;
+            // 
+            // guna2HtmlLabel21
+            // 
+            this.guna2HtmlLabel21.AutoSize = false;
+            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(137, 16);
+            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(81, 15);
+            this.guna2HtmlLabel21.TabIndex = 4;
+            this.guna2HtmlLabel21.Text = "Event_Name";
             // 
             // guna2HtmlLabel5
             // 
@@ -896,6 +866,7 @@
             // 
             // guna2ImageButton10
             // 
+            this.guna2ImageButton10.BackColor = System.Drawing.Color.Transparent;
             this.guna2ImageButton10.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton10.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton10.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton10.Image")));
@@ -906,6 +877,7 @@
             this.guna2ImageButton10.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton10.Size = new System.Drawing.Size(89, 78);
             this.guna2ImageButton10.TabIndex = 8;
+            this.guna2ImageButton10.UseTransparentBackground = true;
             // 
             // guna2Button3
             // 
@@ -1191,13 +1163,69 @@
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2VSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.guna2VSeparator1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2VSeparator1.FillThickness = 3;
             this.guna2VSeparator1.Location = new System.Drawing.Point(875, 3);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 50);
             this.guna2VSeparator1.TabIndex = 3;
+            this.guna2VSeparator1.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(794, 15);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(28, 28);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 5;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(841, 15);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(28, 28);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 9;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.UseTransparentBackground = true;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(743, 15);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(28, 28);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 10;
+            this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.UseTransparentBackground = true;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(12, 3);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(56, 50);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 11;
+            this.guna2PictureBox5.TabStop = false;
+            this.guna2PictureBox5.UseTransparentBackground = true;
             // 
             // Dashboard
             // 
@@ -1219,6 +1247,9 @@
             this.guna2Panel2.ResumeLayout(false);
             this.tabBrowseEvents.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
+            this.SearchBar.ResumeLayout(false);
+            this.SearchBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel4.ResumeLayout(false);
             this.FLPBrowseEvents.ResumeLayout(false);
             this.guna2GradientPanel3.ResumeLayout(false);
@@ -1226,7 +1257,8 @@
             this.tabMyEvents.ResumeLayout(false);
             this.guna2GradientPanel5.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
+            this.FLPEventsRegistered.ResumeLayout(false);
+            this.guna2GradientPanel22.ResumeLayout(false);
             this.guna2Panel7.ResumeLayout(false);
             this.FLPConfirmation.ResumeLayout(false);
             this.PanelConfirmation.ResumeLayout(false);
@@ -1243,20 +1275,18 @@
             this.guna2Panel16.ResumeLayout(false);
             this.guna2Panel19.ResumeLayout(false);
             this.guna2Panel22.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton7;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
         private Guna.UI2.WinForms.Guna2TabControl tcDashboard;
         private System.Windows.Forms.TabPage tabDashboard;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel11;
@@ -1266,8 +1296,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.TabPage tabBrowseEvents;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
-        private Guna.UI2.WinForms.Guna2TextBox SearchBar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.ComboBox CBStatus;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -1284,7 +1312,7 @@
         private System.Windows.Forms.TabPage tabMyEvents;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel FLPEventsRegistered;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel22;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
@@ -1342,5 +1370,15 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2TextBox SearchBar;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
     }
 }

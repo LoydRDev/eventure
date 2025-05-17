@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eventure.Models
 {
@@ -10,8 +6,8 @@ namespace eventure.Models
     {
         public int UserID { get; set; }
         public int EventID { get; set; }
-        public int CreatorID { get; set; }
-        public string Message { get; set; }
+        public int OwnerID { get; set; }
+        public string NotificationMessage { get; set; }
         public bool isRead { get; set; }
         public DateTime CreatedAt { get; set; }
     }

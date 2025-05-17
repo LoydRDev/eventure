@@ -33,19 +33,19 @@
             this.LblEventOwner = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EventOwner = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.EventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.EventCapacity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EventStart = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EventLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnRegisterEvent = new Guna.UI2.WinForms.Guna2Button();
             this.EventDescription = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LblEventStart = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblEventCapacity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LblEvenLocation = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.EventCategory = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            EventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventCapacity = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblEventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventCapacity = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.EventEnd = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.guna2Panel1.Controls.Add(this.LblEvenLocation);
             this.guna2Panel1.Controls.Add(this.EventCategory);
             this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
-            this.guna2Panel1.Controls.Add(EventName);
+            this.guna2Panel1.Controls.Add(this.EventName);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -117,32 +117,6 @@
             this.BtnCancel.TabIndex = 22;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseTransparentBackground = true;
-            // 
-            // EventEnd
-            // 
-            this.EventEnd.AutoSize = false;
-            this.EventEnd.BackColor = System.Drawing.Color.Transparent;
-            this.EventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventEnd.ForeColor = System.Drawing.Color.White;
-            this.EventEnd.Location = new System.Drawing.Point(356, 444);
-            this.EventEnd.Name = "EventEnd";
-            this.EventEnd.Size = new System.Drawing.Size(154, 32);
-            this.EventEnd.TabIndex = 21;
-            this.EventEnd.Text = "Event_Location";
-            this.EventEnd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // EventCapacity
-            // 
-            this.EventCapacity.AutoSize = false;
-            this.EventCapacity.BackColor = System.Drawing.Color.Transparent;
-            this.EventCapacity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EventCapacity.ForeColor = System.Drawing.Color.White;
-            this.EventCapacity.Location = new System.Drawing.Point(29, 444);
-            this.EventCapacity.Name = "EventCapacity";
-            this.EventCapacity.Size = new System.Drawing.Size(154, 32);
-            this.EventCapacity.TabIndex = 20;
-            this.EventCapacity.Text = "Event_Location";
-            this.EventCapacity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // EventStart
             // 
@@ -214,32 +188,6 @@
             this.LblEventStart.Text = "Event_Start";
             this.LblEventStart.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // LblEventEnd
-            // 
-            this.LblEventEnd.AutoSize = false;
-            this.LblEventEnd.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventEnd.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventEnd.Location = new System.Drawing.Point(356, 420);
-            this.LblEventEnd.Name = "LblEventEnd";
-            this.LblEventEnd.Size = new System.Drawing.Size(183, 18);
-            this.LblEventEnd.TabIndex = 12;
-            this.LblEventEnd.Text = "Event_End";
-            this.LblEventEnd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // LblEventCapacity
-            // 
-            this.LblEventCapacity.AutoSize = false;
-            this.LblEventCapacity.BackColor = System.Drawing.Color.Transparent;
-            this.LblEventCapacity.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEventCapacity.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.LblEventCapacity.Location = new System.Drawing.Point(29, 420);
-            this.LblEventCapacity.Name = "LblEventCapacity";
-            this.LblEventCapacity.Size = new System.Drawing.Size(106, 18);
-            this.LblEventCapacity.TabIndex = 11;
-            this.LblEventCapacity.Text = "Capacity";
-            this.LblEventCapacity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // LblEvenLocation
             // 
             this.LblEvenLocation.AutoSize = false;
@@ -281,16 +229,68 @@
             // 
             // EventName
             // 
-            EventName.AutoSize = false;
-            EventName.BackColor = System.Drawing.Color.Transparent;
-            EventName.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            EventName.ForeColor = System.Drawing.Color.White;
-            EventName.Location = new System.Drawing.Point(287, 36);
-            EventName.Name = "EventName";
-            EventName.Size = new System.Drawing.Size(252, 42);
-            EventName.TabIndex = 7;
-            EventName.Text = "Event_Name";
-            EventName.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.EventName.AutoSize = false;
+            this.EventName.BackColor = System.Drawing.Color.Transparent;
+            this.EventName.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventName.ForeColor = System.Drawing.Color.White;
+            this.EventName.Location = new System.Drawing.Point(287, 36);
+            this.EventName.Name = "EventName";
+            this.EventName.Size = new System.Drawing.Size(252, 42);
+            this.EventName.TabIndex = 7;
+            this.EventName.Text = "Event_Name";
+            this.EventName.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // LblEventCapacity
+            // 
+            this.LblEventCapacity.AutoSize = false;
+            this.LblEventCapacity.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventCapacity.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventCapacity.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventCapacity.Location = new System.Drawing.Point(29, 420);
+            this.LblEventCapacity.Name = "LblEventCapacity";
+            this.LblEventCapacity.Size = new System.Drawing.Size(106, 18);
+            this.LblEventCapacity.TabIndex = 11;
+            this.LblEventCapacity.Text = "Capacity";
+            this.LblEventCapacity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LblEventEnd
+            // 
+            this.LblEventEnd.AutoSize = false;
+            this.LblEventEnd.BackColor = System.Drawing.Color.Transparent;
+            this.LblEventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEventEnd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.LblEventEnd.Location = new System.Drawing.Point(356, 420);
+            this.LblEventEnd.Name = "LblEventEnd";
+            this.LblEventEnd.Size = new System.Drawing.Size(183, 18);
+            this.LblEventEnd.TabIndex = 12;
+            this.LblEventEnd.Text = "Event_End";
+            this.LblEventEnd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventCapacity
+            // 
+            this.EventCapacity.AutoSize = false;
+            this.EventCapacity.BackColor = System.Drawing.Color.Transparent;
+            this.EventCapacity.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventCapacity.ForeColor = System.Drawing.Color.White;
+            this.EventCapacity.Location = new System.Drawing.Point(29, 444);
+            this.EventCapacity.Name = "EventCapacity";
+            this.EventCapacity.Size = new System.Drawing.Size(154, 32);
+            this.EventCapacity.TabIndex = 20;
+            this.EventCapacity.Text = "Event_Location";
+            this.EventCapacity.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // EventEnd
+            // 
+            this.EventEnd.AutoSize = false;
+            this.EventEnd.BackColor = System.Drawing.Color.Transparent;
+            this.EventEnd.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventEnd.ForeColor = System.Drawing.Color.White;
+            this.EventEnd.Location = new System.Drawing.Point(356, 444);
+            this.EventEnd.Name = "EventEnd";
+            this.EventEnd.Size = new System.Drawing.Size(154, 32);
+            this.EventEnd.TabIndex = 21;
+            this.EventEnd.Text = "Event_Location";
+            this.EventEnd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // EventRegistration
             // 
@@ -316,16 +316,16 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblEvenLocation;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblEventStart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventEnd;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventCapacity;
         private Guna.UI2.WinForms.Guna2HtmlLabel EventDescription;
         private Guna.UI2.WinForms.Guna2Button BtnRegisterEvent;
-        private Guna.UI2.WinForms.Guna2HtmlLabel EventEnd;
-        private Guna.UI2.WinForms.Guna2HtmlLabel EventCapacity;
         private Guna.UI2.WinForms.Guna2HtmlLabel EventStart;
         private Guna.UI2.WinForms.Guna2HtmlLabel EventLocation;
         private Guna.UI2.WinForms.Guna2Button BtnCancel;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblEventOwner;
         private Guna.UI2.WinForms.Guna2HtmlLabel EventOwner;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventEnd;
+        private Guna.UI2.WinForms.Guna2HtmlLabel EventCapacity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventEnd;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LblEventCapacity;
     }
 }

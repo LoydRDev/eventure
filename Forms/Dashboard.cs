@@ -37,6 +37,7 @@ namespace eventure.Forms
             eventCon.LoadAllEvents(FLPBrowseEvents);
             eventCon.LoadAllConfirmations(FLPConfirmation);
             eventCon.LoadCurrentUserEvents(FLPManageEvents);
+            eventCon.LoadCurrentUserRegisteredEvents(FLPEventsRegistered);
         }
         private void FilterEvents()
         {
@@ -67,6 +68,31 @@ namespace eventure.Forms
                 EventController eventCon = new EventController(userID);
                 eventCon.SearchEvents(FLPBrowseEvents, searchText);
             }
+        }
+
+        private void guna2ImageButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

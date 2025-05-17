@@ -30,10 +30,12 @@ namespace eventure.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabPage tabRegistration;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.TBUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.ImageSlider2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.TBConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.TBPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.TBEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,21 +47,29 @@ namespace eventure.Forms
             this.btnLoginForm = new Guna.UI2.WinForms.Guna2Button();
             this.formControl = new System.Windows.Forms.TabControl();
             this.tabLogin = new System.Windows.Forms.TabPage();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ImageSlider = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblPasswordTextBox = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TBLoginPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblUsernameTextBox = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRegisterForm = new Guna.UI2.WinForms.Guna2Button();
             this.TBLoginUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LoginImageSlider = new Guna.UI2.WinForms.Guna2PictureBox();
             tabRegistration = new System.Windows.Forms.TabPage();
             tabRegistration.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSlider2)).BeginInit();
             this.formControl.SuspendLayout();
             this.tabLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSlider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginImageSlider)).BeginInit();
             this.SuspendLayout();
             // 
             // tabRegistration
@@ -111,10 +121,23 @@ namespace eventure.Forms
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.Controls.Add(this.ImageSlider2);
             this.guna2GradientPanel1.Location = new System.Drawing.Point(40, 51);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(443, 505);
             this.guna2GradientPanel1.TabIndex = 13;
+            // 
+            // ImageSlider2
+            // 
+            this.ImageSlider2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImageSlider2.Image = global::eventure.Properties.Resources._11;
+            this.ImageSlider2.ImageRotate = 0F;
+            this.ImageSlider2.Location = new System.Drawing.Point(0, 0);
+            this.ImageSlider2.Name = "ImageSlider2";
+            this.ImageSlider2.Size = new System.Drawing.Size(443, 505);
+            this.ImageSlider2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImageSlider2.TabIndex = 0;
+            this.ImageSlider2.TabStop = false;
             // 
             // TBConfirmPassword
             // 
@@ -323,8 +346,7 @@ namespace eventure.Forms
             // 
             this.tabLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.tabLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabLogin.Controls.Add(this.guna2ImageButton4);
-            this.tabLogin.Controls.Add(this.guna2ImageButton3);
+            this.tabLogin.Controls.Add(this.guna2PictureBox1);
             this.tabLogin.Controls.Add(this.guna2ImageButton1);
             this.tabLogin.Controls.Add(this.lblTitle);
             this.tabLogin.Controls.Add(this.guna2Panel1);
@@ -341,31 +363,16 @@ namespace eventure.Forms
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "tabPage1";
             // 
-            // guna2ImageButton4
+            // guna2PictureBox1
             // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton4.Image")));
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.Location = new System.Drawing.Point(945, 8);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton4.TabIndex = 8;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.Location = new System.Drawing.Point(891, 8);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(43, 40);
-            this.guna2ImageButton3.TabIndex = 7;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(928, 13);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(40, 38);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 7;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2ImageButton1
             // 
@@ -398,10 +405,23 @@ namespace eventure.Forms
             this.guna2Panel1.AutoRoundedCorners = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2Panel1.Controls.Add(this.ImageSlider);
             this.guna2Panel1.Location = new System.Drawing.Point(470, 71);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(479, 485);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // ImageSlider
+            // 
+            this.ImageSlider.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImageSlider.Image = global::eventure.Properties.Resources._5;
+            this.ImageSlider.ImageRotate = 0F;
+            this.ImageSlider.Location = new System.Drawing.Point(0, 0);
+            this.ImageSlider.Name = "ImageSlider";
+            this.ImageSlider.Size = new System.Drawing.Size(479, 485);
+            this.ImageSlider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImageSlider.TabIndex = 0;
+            this.ImageSlider.TabStop = false;
             // 
             // lblPasswordTextBox
             // 
@@ -515,6 +535,23 @@ namespace eventure.Forms
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 4000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LoginImageSlider
+            // 
+            this.LoginImageSlider.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoginImageSlider.ImageRotate = 0F;
+            this.LoginImageSlider.Location = new System.Drawing.Point(0, 0);
+            this.LoginImageSlider.Name = "LoginImageSlider";
+            this.LoginImageSlider.Size = new System.Drawing.Size(479, 485);
+            this.LoginImageSlider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LoginImageSlider.TabIndex = 0;
+            this.LoginImageSlider.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,8 +564,14 @@ namespace eventure.Forms
             this.Text = "LoginForm";
             tabRegistration.ResumeLayout(false);
             tabRegistration.PerformLayout();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSlider2)).EndInit();
             this.formControl.ResumeLayout(false);
             this.tabLogin.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImageSlider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginImageSlider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,7 +600,10 @@ namespace eventure.Forms
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2TextBox TBUsername;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2PictureBox ImageSlider;
+        public Timer timer1;
+        private Guna.UI2.WinForms.Guna2PictureBox LoginImageSlider;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox ImageSlider2;
     }
 }

@@ -9,6 +9,8 @@ namespace eventure.Forms
 {
     public partial class LoginForm : Form
     {
+        UserDAO userDAO = new UserDAO();
+        int i = 1;
         public LoginForm()
         {
             InitializeComponent();
@@ -26,15 +28,14 @@ namespace eventure.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = TBLoginUsername.Text;
-            string password = TBLoginPassword.Text;
+            string username = TBLoginUsername.Text.Trim();
+            string password = TBLoginPassword.Text.Trim();
 
-            UserDAO userDAO = new UserDAO();
             User loggedInUser = userDAO.AuthenticateUser(username, password);
-            int UserID = loggedInUser.UserID;
-
+            
             if (loggedInUser != null)
             {
+                int UserID = loggedInUser.UserID;
                 MessageBox.Show($"Welcome, {loggedInUser.FirstName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Hide();
@@ -147,6 +148,18 @@ namespace eventure.Forms
                 MessageBox.Show("Please fill in all required fields correctly.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             return isValid;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            i++;
+            if (i > 5)
+            {
+                i = 1;
+            }
+            string images = @"C:\Users\black\OneDrive\Desktop\eventure\Images\"+i.ToString() +".jpg";
+            ImageSlider.Image = Image.FromFile(images);
+            ImageSlider2.Image = Image.FromFile(images);
         }
     }
 }

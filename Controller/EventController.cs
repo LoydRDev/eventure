@@ -179,6 +179,14 @@ namespace eventure.Controller
             }
         }
 
+        public void ViewAttendeeDetails(Attendee attendee, Event e)
+        {
+            int selectedEventID = e.EventID;
+            Event selectedEvent = new EventDAO().GetEventByID(selectedEventID);
+            var viewAttendeeDetails = new AttendeeDetails(attendee.AttendeeID, selectedEvent);
+            viewAttendeeDetails.Show();
+        }
+
         public void LoadAllConfirmations(FlowLayoutPanel flowLayoutPanel)
         {
             flowLayoutPanel.Controls.Clear();
@@ -187,13 +195,14 @@ namespace eventure.Controller
             {
                 if (currentUser != null && currentUser.UserID == ev.CreatorID)
                 {
+                    flowLayoutPanel.Controls.Clear();
                     var attendeeList = new AttendeeDAO().GetAttendees(ev.EventID, userID);
                     //If status is Approved, skip
                     for (int i = 0; i < attendeeList.Count; i++)
                     {
                         Attendee attendee = attendeeList[i];
 
-                        if (attendee.Status != "Approved")
+                        if (attendee.Status != "Approved" && attendee.Status == "Rejected")
                         {
                             Event evt = new EventDAO().GetEventByID(attendee.EventID);
                             User user = new UserDAO().GetUserByID(attendee.AttendeeID);
@@ -218,7 +227,7 @@ namespace eventure.Controller
                             UserFullname.TabIndex = 2;
                             UserFullname.Text = user.FirstName + " " + user.LastName;
                             UserFullname.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-                            UserFullname.Click += (s, args) => ViewAttendeeDetails();
+                            UserFullname.Click += (s, args) => ViewAttendeeDetails(attendee, evt);
 
                             var EventName = new Guna.UI2.WinForms.Guna2HtmlLabel();
                             EventName.AutoSize = false;
@@ -263,10 +272,6 @@ namespace eventure.Controller
 
                             flowLayoutPanel.Controls.Add(PanelConfirmation);
                         }
-                        else if (attendee.Status == "Rejected")
-                        {
-                            continue;
-                        }
                     }
                 }
             }
@@ -279,10 +284,6 @@ namespace eventure.Controller
             {
                 MessageBox.Show("Registration approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 new AttendeeDAO().ApproveRegistration(eventID, userID);
-            }
-            else
-            {
-                MessageBox.Show("Registration not approved.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -447,6 +448,7 @@ namespace eventure.Controller
       
         public void LoadCurrentUserRegisteredEvents(FlowLayoutPanel flowLayoutPanel)
         {
+           flowLayoutPanel.Controls.Clear();
             var currentUser = new UserDAO().GetCurrentUser(userID);
             foreach (var e in events)
             {
@@ -456,19 +458,31 @@ namespace eventure.Controller
                     for (int i = 0; i < userEvents.Count; i++)
                     {
                         Event events = userEvents[i];
-                        var eventPanels = GetEvents(events);
-                        foreach (var panel in eventPanels)
-                        {
+                        
+                        var guna2GradientPanel22 = new Guna.UI2.WinForms.Guna2GradientPanel();
+                        guna2GradientPanel22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+                        guna2GradientPanel22.FillColor2 = System.Drawing.Color.Silver;
+                        guna2GradientPanel22.Location = new System.Drawing.Point(13, 8);
+                        guna2GradientPanel22.Name = "guna2GradientPanel22";
+                        guna2GradientPanel22.Size = new System.Drawing.Size(362, 49);
+                        guna2GradientPanel22.TabIndex = 1;
+                        
+                        var guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+                        guna2HtmlLabel21.AutoSize = false;
+                        guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+                        guna2HtmlLabel21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        guna2HtmlLabel21.Location = new System.Drawing.Point(137, 16);
+                        guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+                        guna2HtmlLabel21.Size = new System.Drawing.Size(81, 15);
+                        guna2HtmlLabel21.TabIndex = 4;
+                        guna2HtmlLabel21.Text = events.EventName;
 
-                        }
+                        guna2GradientPanel22.Controls.Add(guna2HtmlLabel21);
+
+                        flowLayoutPanel.Controls.Add(guna2GradientPanel22);
                     }
                 }
             }
-        }
-
-        public void ViewAttendeeDetails()
-        {
-
         }
     }
 }

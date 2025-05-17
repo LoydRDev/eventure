@@ -1,9 +1,10 @@
-﻿using eventure.Database;
-using eventure.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
+
+using eventure.Database;
+using eventure.Models;
 
 namespace eventure.DataAccess
 {
@@ -80,6 +81,59 @@ namespace eventure.DataAccess
             return attendees;
         }
 
+        //Get Attendee FirstName
+        public string GetAttendeeFullname(int eventID, int userID)
+        {
+            string attendeeName = "";
+
+            using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = @"SELECT Users.FirstName, Users.LastName FROM Users INNER JOIN Attendees ON Attendees.AttendeeID = Users.UserID WHERE Attendees.EventID = ? AND Users.UserID = ?";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                {
+                    cmd.Parameters.Add("?", OleDbType.Integer).Value = eventID;
+                    cmd.Parameters.Add("?", OleDbType.Integer).Value = userID;
+
+                    connection.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            attendeeName = $"{reader["FirstName"]} {reader["LastName"]}";
+                        }
+                    }
+                }
+            }
+
+            return attendeeName;
+        }
+        public string GetAttendeeEmail(int eventID, int userID)
+        {
+            string attendeeEmail = "";
+
+            using (OleDbConnection connection = new OleDbConnection(DatabaseHelper.connectionString))
+            {
+                string query = @"SELECT Users.Email FROM Users INNER JOIN Attendees ON Attendees.AttendeeID = Users.UserID WHERE Attendees.EventID = ? AND Users.UserID = ?";
+
+                using (OleDbCommand cmd = new OleDbCommand(query, connection))
+                {
+                    cmd.Parameters.Add("?", OleDbType.Integer).Value = eventID;
+                    cmd.Parameters.Add("?", OleDbType.Integer).Value = userID;
+
+                    connection.Open();
+                    using (OleDbDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            attendeeEmail = reader["Email"].ToString();
+                        }
+                    }
+                }
+            }
+            return attendeeEmail;
+        }
+
         public void ApproveRegistration(int eventID, int userID)
         {
             try
@@ -107,6 +161,7 @@ namespace eventure.DataAccess
                 MessageBox.Show($"Attendee1 An unexpected error occurred: {ex.Message}");
             }
         }
+
         public void RejectRegistration(int eventID, int userID)
         {
             try
