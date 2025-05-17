@@ -202,7 +202,7 @@ namespace eventure.Controller
                     {
                         Attendee attendee = attendeeList[i];
 
-                        if (attendee.Status != "Approved" && attendee.Status == "Rejected")
+                        if (attendee.Status != "Approved")
                         {
                             Event evt = new EventDAO().GetEventByID(attendee.EventID);
                             User user = new UserDAO().GetUserByID(attendee.AttendeeID);
@@ -239,23 +239,23 @@ namespace eventure.Controller
                             EventName.TabIndex = 1;
                             EventName.Text = evt.EventName;
 
-                            var BtnApprove = new Guna.UI2.WinForms.Guna2ImageButton();
-                            BtnApprove.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-                            BtnApprove.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-                            BtnApprove.Image = ((System.Drawing.Image)(resources.GetObject("BtnApprove.Image")));
-                            BtnApprove.ImageOffset = new System.Drawing.Point(0, 0);
+                            var BtnApprove = new Guna.UI2.WinForms.Guna2PictureBox();
+                            BtnApprove.BackColor = System.Drawing.Color.Transparent;
+                            BtnApprove.FillColor = System.Drawing.Color.Black;
+                            BtnApprove.Image = global::eventure.Properties.Resources.check2;
                             BtnApprove.ImageRotate = 0F;
-                            BtnApprove.Location = new System.Drawing.Point(293, 13);
+                            BtnApprove.Location = new System.Drawing.Point(312, 8);
                             BtnApprove.Name = "BtnApprove";
-                            BtnApprove.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-                            BtnApprove.Size = new System.Drawing.Size(22, 21);
-                            BtnApprove.TabIndex = 1;
+                            BtnApprove.Size = new System.Drawing.Size(30, 31);
+                            BtnApprove.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+                            BtnApprove.TabIndex = 3;
+                            BtnApprove.TabStop = false;
                             BtnApprove.Click += (s, args) => ConfirmRegistration(attendee.EventID, attendee.AttendeeID);
 
                             var BtnReject = new Guna.UI2.WinForms.Guna2ImageButton();
                             BtnReject.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
                             BtnReject.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-                            BtnReject.Image = ((System.Drawing.Image)(resources.GetObject("BtnReject.Image")));
+                            BtnReject.Image = global::eventure.Properties.Resources.cancel;
                             BtnReject.ImageOffset = new System.Drawing.Point(0, 0);
                             BtnReject.ImageRotate = 0F;
                             BtnReject.Location = new System.Drawing.Point(321, 13);

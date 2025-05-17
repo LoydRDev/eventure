@@ -3,48 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\controller\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:controller\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\dataaccess\\attendeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:dataaccess\\attendeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\dataaccess\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:dataaccess\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\forms\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\dataaccess\\notificationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:dataaccess\\notificationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|C:\\Users\\black\\OneDrive\\Desktop\\eventure\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\dataaccess\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:dataaccess\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\controller\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:controller\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\database\\attendeetable.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:database\\attendeetable.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\database\\eventtable.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:database\\eventtable.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\forms\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:forms\\eventregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\dataaccess\\notificationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:dataaccess\\notificationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|c:\\users\\black\\onedrive\\desktop\\eventure\\dataaccess\\attendeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F43BCB13-1632-4106-89B6-949BB625D11C}|eventure.csproj|solutionrelative:dataaccess\\attendeedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,8 +54,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Forms\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Forms\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T03:12:06.473Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\Dashboard.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\Dashboard.Designer.cs",
+              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\Dashboard.Designer.cs",
+              "RelativeToolTip": "Forms\\Dashboard.Designer.cs",
+              "ViewState": "AgIAAJgEAAAAAAAAAAAkwKoEAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T03:04:50.305Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -70,39 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventTable.txt",
-              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Database\\EventTable.txt",
-              "RelativeDocumentMoniker": "Database\\EventTable.txt",
-              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Database\\EventTable.txt",
-              "RelativeToolTip": "Database\\EventTable.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-16T20:49:39.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AttendeeTable.txt",
-              "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Database\\AttendeeTable.txt",
-              "RelativeDocumentMoniker": "Database\\AttendeeTable.txt",
-              "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Database\\AttendeeTable.txt",
-              "RelativeToolTip": "Database\\AttendeeTable.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-16T20:49:36.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "EventController.cs",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Controller\\EventController.cs",
               "RelativeDocumentMoniker": "Controller\\EventController.cs",
               "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Controller\\EventController.cs",
               "RelativeToolTip": "Controller\\EventController.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAmwMwAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAACcBAAAAAAAAAAAYwPcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T20:40:28.699Z",
               "EditorCaption": ""
@@ -115,27 +114,27 @@
               "RelativeDocumentMoniker": "Forms\\Dashboard.cs",
               "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\Dashboard.cs",
               "RelativeToolTip": "Forms\\Dashboard.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T20:40:17.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
               "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs",
               "RelativeToolTip": "Forms\\LoginForm.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAmwCMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwCMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T20:10:37.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
@@ -147,20 +146,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "EventRegistration.cs",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\EventRegistration.cs",
               "RelativeDocumentMoniker": "Forms\\EventRegistration.cs",
               "ToolTip": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\EventRegistration.cs",
               "RelativeToolTip": "Forms\\EventRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T20:03:52.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "NotificationDAO.cs",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\DataAccess\\NotificationDAO.cs",
               "RelativeDocumentMoniker": "DataAccess\\NotificationDAO.cs",
@@ -173,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "EventRegistration.cs [Design]",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\Forms\\EventRegistration.cs",
               "RelativeDocumentMoniker": "Forms\\EventRegistration.cs",
@@ -185,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 4,
               "Title": "AttendeeDAO.cs",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\DataAccess\\AttendeeDAO.cs",
               "RelativeDocumentMoniker": "DataAccess\\AttendeeDAO.cs",
@@ -198,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "UserDAO.cs",
               "DocumentMoniker": "C:\\Users\\black\\OneDrive\\Desktop\\eventure\\DataAccess\\UserDAO.cs",
               "RelativeDocumentMoniker": "DataAccess\\UserDAO.cs",

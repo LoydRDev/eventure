@@ -70,27 +70,12 @@ namespace eventure.Forms
             }
         }
 
-        private void guna2ImageButton7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ImageButton6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ImageButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ImageButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2PictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox6_Click(object sender, EventArgs e)
         {
 
         }
